@@ -160,6 +160,25 @@ label.lbl{font-size:13px;color:var(--muted);font-weight:500;display:block;margin
 .toasts{position:fixed;left:0;right:0;top:calc(12px + env(safe-area-inset-top,0px));z-index:70;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;padding:0 16px}
 .toast{pointer-events:auto;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:16px;background:var(--surface-2);border:1px solid var(--line-strong);box-shadow:0 16px 36px -18px rgba(0,0,0,.7);max-width:420px;animation:tin .35s cubic-bezier(.2,.9,.25,1)}
 .toast .badge{width:36px;height:36px;flex:none}
+/* Prayer Room timer */
+.rt-ghost{animation:rtout .75s cubic-bezier(.4,0,.6,1) forwards}
+.rd{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;gap:10px;padding:0 8px}
+.rd h1{margin:0;font-size:clamp(28px,8.6vw,36px);font-weight:600;line-height:1.1;text-wrap:balance;animation:rdin 1s .5s cubic-bezier(.2,.9,.25,1) backwards}
+.rd p{margin:0;font-size:clamp(22px,6.4vw,28px);font-weight:500;color:var(--accent);animation:rdin 1s .95s cubic-bezier(.2,.9,.25,1) backwards}
+.rd-btn{animation:rdin .9s 1.5s cubic-bezier(.2,.9,.25,1) backwards}
+@keyframes rtout{to{opacity:0;transform:scale(.93);filter:blur(7px)}}
+@keyframes rdin{from{opacity:0;transform:translateY(14px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+.rt-stage{position:relative;flex:1;display:flex;align-items:center;justify-content:center;width:100%;padding:8px 0}
+.rt{position:relative;width:min(78vw,300px);aspect-ratio:1;display:grid;place-items:center}
+.rt-glow{position:absolute;inset:-14%;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(185,166,255,.30),rgba(185,166,255,.08) 52%,transparent 70%);animation:breathe 10s ease-in-out infinite}
+.rt.paused .rt-glow{animation-play-state:paused;opacity:.45}
+.rt svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.rt-track{fill:none;stroke:rgba(255,255,255,.08);stroke-width:5}
+.rt-arc{fill:none;stroke:url(#rtg);stroke-width:5;stroke-linecap:round;transition:stroke-dashoffset .5s linear;filter:drop-shadow(0 0 8px rgba(185,166,255,.55))}
+.rt.paused .rt-arc{opacity:.5;filter:none}
+.rt-in{position:relative;text-align:center}
+.rt-time{font-size:clamp(54px,18vw,72px);font-weight:300;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+.rt-sub{margin-top:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
 /* Prayer Room: leave-confirm */
 .room-confirm{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(10,8,20,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);animation:fadein .25s ease both}
 .rc-card{width:100%;max-width:340px;text-align:center;padding:22px 20px;border-radius:22px;background:var(--surface-2);border:1px solid var(--line-strong);box-shadow:0 24px 60px -20px rgba(0,0,0,.8);animation:achin .5s cubic-bezier(.2,1,.3,1) backwards}
@@ -5936,41 +5955,52 @@ function vRoom(){
   if (!r.start){
     return `<div class="wrap full room"><div class="row" style="width:100%;padding-top:6px"><button class="iconbtn" data-a="roomClose" aria-label="Close">${I.close}</button></div>
       <div class="orb"></div><div class="eyebrow">Prayer Room</div><h1 style="margin:8px 0 10px">Come away for a while</h1>
-      <p class="muted" style="max-width:32ch">Six short movements: be still, praise, confess, thank, ask, and listen. Pick how long you have.</p>
+      <p class="muted" style="max-width:32ch">Put the phone down and be with God. Pick how long you have, and Selah will keep the time.</p>
       <div class="chips" style="justify-content:center;margin:22px 0">${[3,5,10,15].map(n=>`<button class="chip ${r.len===n?"on":""}" data-a="roomLen" data-v="${n}">${n} min</button>`).join("")}</div>
       <button class="btn primary" data-a="roomStart" style="min-width:200px">Begin</button>
       <button class="btn ghost" data-a="roomLockHow" style="margin-top:10px">Lock your phone to Selah</button></div>`;
   }
   if (r.finished){
-    return `<div class="wrap full room"><div class="sunrise"></div><div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px">
-      <div class="eyebrow">Amen</div><h1>Well done.</h1><p class="muted" style="max-width:30ch">You spent ${r.len} minutes with God. Carry that peace into the rest of your day.</p></div>
-      <button class="btn primary block" data-a="roomClose">Done</button></div>`;
+    const totalS = r.len*60;
+    return `<div class="wrap full room"><div class="sunrise" style="animation-duration:2.2s"></div>
+      <div class="row between" style="width:100%;padding-top:6px;visibility:hidden"><span class="iconbtn" aria-hidden="true">${I.close}</span></div>
+      <div class="rt-stage"><div class="rt rt-ghost"><div class="rt-glow"></div>
+        <svg viewBox="0 0 280 280" aria-hidden="true"><circle cx="140" cy="140" r="${RT_R}" class="rt-track"/></svg>
+        <div class="rt-in"><div class="rt-time num">0:00</div><div class="rt-sub">remaining</div></div></div>
+        <div class="rd" role="status"><h1>Session complete.</h1><p>Well done.</p></div></div>
+      <div class="row" style="padding-top:8px;width:100%"><button class="btn primary block rd-btn" data-a="roomClose">Done</button></div></div>`;
   }
-  const el = roomElapsed(), totalS = r.len*60, per = totalS/ROOM_STEPS.length, idx = Math.min(ROOM_STEPS.length-1, Math.floor(el/per)), stp = ROOM_STEPS[idx];
-  return `<div class="wrap full room"><div class="row between" style="width:100%;padding-top:6px"><button class="iconbtn" data-a="roomAsk" aria-label="Leave the room">${I.close}</button><span class="pill num" id="room-time">${fmtClock(totalS-el)}</span></div>
-    <div class="orb" style="${r.paused?"animation-play-state:paused":""}"></div>
-    <div class="eyebrow" id="room-step">${idx+1} of ${ROOM_STEPS.length}</div><h1 style="margin:8px 0 12px">${esc(stp.name)}</h1>
-    <p class="muted" style="max-width:32ch;font-size:17px">${esc(stp.prompt)}</p>
-    <div class="card" style="margin-top:22px;text-align:left;max-width:440px"><p class="verse" style="font-size:17px">${esc(V[stp.ref])}</p><p class="ref" style="margin-top:8px">${esc(stp.ref)}</p></div>
-    ${r.awayPaused&&r.paused?`<p class="small faint" style="margin-top:16px;max-width:32ch">You stepped away, so the timer paused. Pick it back up whenever you're ready.</p>`:""}
-    <div class="row" style="margin-top:auto;padding-top:24px;width:100%"><button class="btn soft grow" data-a="roomPause">${r.paused?"Resume":"Pause"}</button><button class="btn ghost" data-a="roomSkip">Next</button></div></div>
+  const totalS = r.len*60, el = r.finishing ? totalS : roomElapsed();
+  return `<div class="wrap full room"><div class="row between" style="width:100%;padding-top:6px"><button class="iconbtn" data-a="roomAsk" aria-label="Leave the room">${I.close}</button><span class="pill num">${r.len} min</span></div>
+    <div class="rt-stage"><div class="rt ${r.paused&&!r.finishing?"paused":""}"><div class="rt-glow"></div>
+      <svg viewBox="0 0 280 280" aria-hidden="true"><defs><linearGradient id="rtg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d6c9ff"/><stop offset="1" stop-color="#8f7cf0"/></linearGradient></defs>
+        <circle cx="140" cy="140" r="${RT_R}" class="rt-track"/>
+        <circle cx="140" cy="140" r="${RT_R}" class="rt-arc" id="room-arc" stroke-dasharray="${RT_C.toFixed(2)}" stroke-dashoffset="${(RT_C*Math.min(1,el/totalS)).toFixed(2)}"/></svg>
+      <div class="rt-in"><div class="rt-time num" id="room-time">${fmtClock(totalS-el)}</div><div class="rt-sub" id="room-sub">${r.paused?"Paused":"remaining"}</div></div></div></div>
+    ${r.awayPaused&&r.paused?`<p class="small faint" style="max-width:32ch;margin:0 auto 14px">You stepped away, so the timer paused. Pick it back up whenever you're ready.</p>`:""}
+    <div class="row" style="padding-top:8px;width:100%"><button class="btn soft grow" data-a="roomPause"${r.finishing?" disabled":""}>${r.paused&&!r.finishing?"Resume":"Pause"}</button></div></div>
     ${r.confirm?`<div class="room-confirm" role="dialog" aria-modal="true"><div class="rc-card"><h2>Leave the room?</h2><p class="muted">You're ${fmtClock(el)} in. There's still time with God left. Stay a little longer.</p><div class="stack" style="gap:8px;margin-top:14px"><button class="btn primary block" data-a="roomStay">Stay in the room</button><button class="btn ghost block" data-a="roomEnd">End session</button></div></div></div>`:""}`;
 }
+const RT_R = 124, RT_C = 2*Math.PI*124;
 const fmtClock = s => { s=Math.max(0,Math.ceil(s)); return Math.floor(s/60)+":"+pad(s%60); };
 function roomElapsed(){ const r=ui.room; return (r.acc||0) + (r.paused||!r.runFrom ? 0 : (Date.now()-r.runFrom)/1000); }
 function roomTick(){
   const r = ui.room; if (!r || !r.start || r.finished) { clearInterval(roomTimer); roomTimer=null; return; }
   const el = roomElapsed(), totalS = r.len*60;
   if (el >= totalS){ finishRoom(); return; }
-  const per = totalS/ROOM_STEPS.length, idx = Math.min(ROOM_STEPS.length-1, Math.floor(el/per));
-  if (idx !== r.lastIdx){ r.lastIdx = idx; render(); return; }
   const te = $("#room-time"); if (te) te.textContent = fmtClock(totalS-el);
+  const ar = $("#room-arc"); if (ar) ar.setAttribute("stroke-dashoffset", (RT_C*Math.min(1,el/totalS)).toFixed(2));
 }
 function finishRoom(){
-  const r = ui.room; r.finished = true; clearInterval(roomTimer); roomTimer=null;
+  const r = ui.room; if (!r || r.finishing || r.finished) return;
+  r.finishing = true; r.confirm = false; clearInterval(roomTimer); roomTimer=null;
+  /* hold on 0:00 for a beat, then the timer melts away and the words arrive */
+  const te = $("#room-time"); if (te) te.textContent = "0:00";
+  const ar = $("#room-arc"); if (ar) ar.setAttribute("stroke-dashoffset", RT_C.toFixed(2));
+  const rc = document.querySelector(".room-confirm"); if (rc) rc.remove();
   S.roomSessions = (S.roomSessions||0)+1; const d = ensureDay(todayK()); if (S.profile.practices.prayer) d.practices.prayer = true; save();
   try{ r.lock && r.lock.release && r.lock.release(); }catch(e){}
-  render(); checkAch();
+  setTimeout(()=>{ if (ui.room !== r) return; r.finished = true; render(); setTimeout(checkAch, 2200); }, 1300);
 }
 
 /* Keep the person in the room: screen stays awake, back gestures ask first, time pauses if they leave the app. */
@@ -5978,7 +6008,7 @@ function roomLock(){
   const r = ui.room; if (!r) return;
   try{ if (navigator.wakeLock && (!r.lock || r.lock.released)) navigator.wakeLock.request("screen").then(l=>{ r.lock = l; }).catch(()=>{}); }catch(e){}
 }
-function roomActive(){ const r = ui.room; return !!(r && r.start && !r.finished); }
+function roomActive(){ const r = ui.room; return !!(r && r.start && !r.finished && !r.finishing); }
 let roomGuarded = false;
 function roomGuardOn(){
   if (roomGuarded) return; roomGuarded = true;
@@ -6457,13 +6487,12 @@ const A = {
   saved: () => openSheet({type:"saved"}),
   roomOpen: () => { ui.room = {len:5}; ui.view = {type:"room"}; render(); toTop(); },
   roomLen: el => { ui.room.len = +el.dataset.v; render(); },
-  roomStart: async () => { const r=ui.room; r.start=Date.now(); r.runFrom=Date.now(); r.acc=0; r.lastIdx=0; render(); clearInterval(roomTimer); roomTimer=setInterval(roomTick,500); roomGuardOn(); roomLock(); },
-  roomPause: () => { const r=ui.room; if (r.paused){ r.paused=false; r.awayPaused=false; r.runFrom=Date.now(); roomLock(); } else { r.acc=roomElapsed(); r.paused=true; } render(); },
-  roomAsk: () => { ui.room.confirm = true; render(); },
+  roomStart: async () => { const r=ui.room; r.start=Date.now(); r.runFrom=Date.now(); r.acc=0; render(); clearInterval(roomTimer); roomTimer=setInterval(roomTick,500); roomGuardOn(); roomLock(); },
+  roomPause: () => { const r=ui.room; if (r.finishing) return; if (r.paused){ r.paused=false; r.awayPaused=false; r.runFrom=Date.now(); roomLock(); } else { r.acc=roomElapsed(); r.paused=true; } render(); },
+  roomAsk: () => { const r=ui.room; if (r.finishing){ try{ r.lock&&r.lock.release(); }catch(e){} ui.room=null; ui.view=null; ui.tab="pray"; render(); return; } r.confirm = true; render(); },
   roomStay: () => { if (ui.room){ ui.room.confirm = false; render(); } },
   roomLockHow: () => openSheet({type:"roomlock"}),
-  roomSkip: () => { const r=ui.room, totalS=r.len*60, per=totalS/ROOM_STEPS.length, el=roomElapsed(), idx=Math.floor(el/per); const target=(idx+1)*per; if (target>=totalS){ finishRoom(); return; } r.acc=target; r.runFrom=Date.now(); r.paused=false; render(); },
-  roomEnd: () => { const r=ui.room; r.confirm=false; if (roomElapsed() >= 60) { finishRoom(); } else { clearInterval(roomTimer); roomTimer=null; try{ r.lock&&r.lock.release(); }catch(e){} ui.room=null; ui.view=null; render(); } },
+  roomEnd: () => { const r=ui.room; if (!r) return; clearInterval(roomTimer); roomTimer=null; try{ r.lock&&r.lock.release(); }catch(e){} ui.room=null; ui.view=null; render(); },
   roomClose: () => { clearInterval(roomTimer); roomTimer=null; try{ ui.room&&ui.room.lock&&ui.room.lock.release(); }catch(e){} ui.room=null; ui.view=null; ui.tab="pray"; render(); },
   openStruggle: el => { ui.view = {type:"struggle", id:el.dataset.v}; render(); toTop(); },
   back: () => { ui.view=null; render(); },
