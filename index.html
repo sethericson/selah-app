@@ -401,6 +401,28 @@ main header h1{font-size:34px;letter-spacing:-.035em}
 .opt .chev{color:var(--faint)}
 @media (min-width:600px){.moodgrid{grid-template-columns:repeat(3,1fr)} .ach{grid-template-columns:repeat(4,1fr)}}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* home screen install */
+.install{width:100%;margin-top:14px;padding:18px;border-radius:22px;background:radial-gradient(120% 140% at 0% 0%,rgba(185,166,255,.16),transparent 65%),var(--surface);border:1px solid rgba(185,166,255,.16);display:flex;flex-direction:column;gap:14px}
+.install-t{display:flex;gap:14px;align-items:flex-start}
+.install-t .ico{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.install-t .ico svg{width:20px;height:20px}
+.install h3{font-size:16px;margin-bottom:4px}
+.install{padding:16px}
+.install-how{margin-top:10px;display:inline-flex;align-items:center;gap:4px;padding:0;border:0;background:none;color:var(--accent);font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.install-how span{display:inline-flex}.install-how svg{width:16px;height:16px}
+@media (max-height:700px){.ob .body.welcome{gap:12px}.ob .body.welcome .hero-logo.glow{width:58px;height:58px;border-radius:16px}.ob .body.welcome .wordmark{font-size:46px}.ob .body.welcome .lead{font-size:16px}.install{margin-top:6px}}
+.howto{padding:16px;border-radius:18px;background:var(--surface);border:1px solid var(--line)}
+.howto.mine{border-color:rgba(185,166,255,.35);background:radial-gradient(120% 140% at 0% 0%,rgba(185,166,255,.12),transparent 65%),var(--surface)}
+.howto-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.howto-h h3{font-size:16px}
+.tag{font-size:11px;font-weight:600;letter-spacing:.04em;padding:4px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.steps{list-style:none;counter-reset:st;display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
+.steps li{counter-increment:st;position:relative;padding-left:32px;font-size:15px;line-height:1.45;color:var(--muted)}
+.steps li b{color:var(--fg);font-weight:600}
+.steps li::before{content:counter(st);position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;background:var(--accent-soft);color:var(--accent)}
+.note-soft{font-size:14px;line-height:1.5;color:var(--muted);padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.03)}
+.note-soft b{color:var(--fg)}
 </style>
 </head>
 <body>
@@ -3049,6 +3071,80 @@ s:["Good day. Thank God for it.",
 "Keep going."]}
 });
 
+/* "Dressing provocatively" struggle: verses, prayers, tips, one-line prayers, in-the-moment actions, and advice */
+Object.assign(V, {
+"1 Timothy 2:9-10":"In the same way, women should dress themselves in modest clothing, with decency and self-control, not with braided hair, gold, pearls, or expensive clothes, but with good works, which is fitting for those who profess godliness.",
+"1 Peter 3:3-4":"Do not let your beauty come from outward adorning, like braiding your hair, wearing gold, or putting on fine clothes. Instead, let it be the hidden person of the heart, in what never fades, the beauty of a gentle and quiet spirit, which is very precious in God's sight.",
+"Romans 12:1":"So I urge you, brothers and sisters, by the mercies of God, to present your bodies as a living sacrifice, holy and acceptable to God, which is your reasonable service.",
+"Romans 14:13":"So let us stop judging one another. Instead, decide never to put a stumbling block or a reason to fall in a brother's way.",
+"1 Corinthians 8:9":"But be careful that this freedom of yours does not become a stumbling block to those who are weak.",
+"Colossians 3:12":"So, as God's chosen people, holy and dearly loved, put on compassion, kindness, humility, gentleness, and patience.",
+"Galatians 5:13":"For you, brothers and sisters, have been called to freedom. Only do not use your freedom as an opportunity for the flesh, but serve one another in love."
+});
+
+CATALOG[0].items.push(["Dressing provocatively","modesty"]);
+
+THEMES.modesty = {label:"Modesty",
+ verses:["1 Timothy 2:9-10","1 Peter 3:3-4","1 Corinthians 6:19-20","Romans 12:1","1 Samuel 16:7","Galatians 1:10","Proverbs 31:30","Psalm 139:14","1 Corinthians 10:31","Romans 14:13","1 Corinthians 8:9","Colossians 3:12","Galatians 5:13","Romans 12:2","1 John 3:1","Matthew 5:16"],
+ prayers:[
+ "Lord, I want to be seen, and sometimes I dress to get that attention. Remind me that you already see me fully and love me. Help me choose what I wear from security, not from a hunger for approval. Amen.",
+ "Father, my body belongs to you. Help me honor you with how I present it, not out of shame but out of thankfulness. Thank you for making me the way you did. Amen.",
+ "Jesus, show me the real reason behind what I reach for in the morning. If it's insecurity, heal it. If it's wanting someone's eyes on me, turn my heart back toward you. Amen.",
+ "God, I don't want my worth to depend on how people react to the way I look. Root who I am in being your child. Let the thing people notice most about me be your kindness in me. Amen.",
+ "Lord, I care about the people around me. Help me love them well, even in small choices like what I wear. Give me wisdom without making me anxious about it. Amen.",
+ "Father, the world keeps telling me that showing more makes me worth more. That's a lie, and I want to believe your truth instead. I am fearfully and wonderfully made. Amen.",
+ "Jesus, I feel pressure to fit in and keep up with everyone else. Give me the confidence to be different when I need to be, and the peace to not overthink it. Amen.",
+ "God, thank you that you look at the heart. Make my heart beautiful to you first, and let my outside reflect what you're doing inside. Amen.",
+ "Lord, forgive me for the times I've used my body to get attention or approval. I don't have to earn being wanted. You already chose me. Amen.",
+ "Father, give me wisdom for tomorrow. When I'm getting ready, help me pause and ask whether this honors you, and then let it go and live my day. Amen."],
+ tips:[
+ "Before you get dressed, ask one honest question: who am I dressing for today, and what do I want them to notice?",
+ "Notice which days this is hardest. It's often after feeling ignored, insecure, or compared. Bring that feeling to God before you open the closet.",
+ "Modesty isn't about looking plain. You can dress well, look good, and still honor God. It's about the message and the motive.",
+ "Pick out tomorrow's outfit the night before, when you're calm, instead of reacting to how you feel in the morning.",
+ "Pay attention to what you scroll. Feeds full of people showing off their bodies shape what feels normal. Unfollow a few accounts this week.",
+ "When you're unsure about something, ask a trusted friend, sibling, or parent whose judgment you respect.",
+ "If there are a few pieces you always feel uneasy wearing, set them aside. Fewer gray areas means fewer daily battles.",
+ "Your worth was settled at the cross, not in someone's reaction. Attention fades in minutes. God's love doesn't.",
+ "Don't swing into shame or hating your body. God made it good. The goal is honoring him with it, not hiding from it.",
+ "Think about where you're going. Church, school, work, and a party all ask different things. Dress with the people around you in mind."]};
+
+EXTRA_THEMES.modesty = {v:[], p:[], t:[],
+ q:["Lord, you already see me. That's enough.","Jesus, I'm yours, inside and out.","Father, help me dress from security, not insecurity.","God, I don't need their eyes. I have yours.","Lord, let my heart be what people notice.","Jesus, my worth isn't up for a vote.","Father, help me honor you with my body today.","God, quiet my need for attention.","Lord, give me wisdom and peace about this.","Jesus, thank you for making me well."],
+ a:["Change into something you feel at peace in, then head out.","Step away from the mirror for a minute and pray.","Put your phone away instead of posting that picture.","Delete the photo from your drafts.","Ask yourself out loud who you're hoping will notice.","Text a trusted friend and ask what they honestly think.","Grab a layer, like a jacket or overshirt, and wear it.","Read 1 Samuel 16:7 before you leave.","Write down three things God says about you.","Close the app you've been comparing yourself on."]};
+
+ADVICE.modesty = {
+r:["A hard day with this doesn't make you a bad person. Bring it honestly to God, and let him deal with what's underneath it.",
+"Think back to this morning. What were you feeling when you got dressed? That feeling is probably the real thing to work on.",
+"Tonight, lay out tomorrow's clothes while you're calm and thinking clearly.",
+"If you were hoping for someone's attention today, tell God that honestly. He isn't shocked, and he's the one who can actually fill that need.",
+"Don't let this turn into hating your body. God made it good. Today was about a choice, not about you being wrong.",
+"Look at what you've been watching and scrolling lately. What you take in shapes what feels normal.",
+"Read 1 Peter 3:3-4 tonight and ask God to grow the kind of beauty that lasts.",
+"Think about talking to someone you trust about why this pull feels strong right now. You don't have to figure it out alone.",
+"If one piece of clothing keeps pulling you back here, consider setting it aside.",
+"You were honest tonight, and that's where change starts. Tomorrow is a fresh start."],
+m:["A mixed day is still a day you paid attention. Notice what made the good choices easier.",
+"You're asking the right questions now. Keep asking who you're dressing for.",
+"Notice the moments you felt pressure today and where it came from: a person, an app, or an event.",
+"Pick one thing to do differently tomorrow, like choosing your outfit the night before.",
+"Remember, modesty is about motive, not looking plain. You can look good and still honor God.",
+"If you second-guessed something today, trust that instinct a little more next time.",
+"Thank God for the moments you chose well. Small wins add up.",
+"Mute one account that makes this harder, just for this week, and see what changes.",
+"Pray Galatians 1:10 tomorrow morning before you get ready.",
+"You're growing in this, even if it doesn't feel like a straight line."],
+s:["You honored God with how you showed up today. That's worth thanking him for.",
+"You dressed from security today, not insecurity. Remember how that felt.",
+"Notice what helped today, and do it again tomorrow.",
+"Today proved your worth doesn't need anyone's reaction. Hold onto that.",
+"Strong day. Let your confidence come from God, not just from the outfit.",
+"Your choices today were a quiet act of love for God and the people around you.",
+"Keep the habit that worked. Small routines protect good days.",
+"Write down what made today easier so you can come back to it on a hard day.",
+"Thank God that he looks at your heart, and that he loves what he's growing there.",
+"Well done. Keep walking this out one day at a time."]};
+
 /* "I need help right now" lines, wins, Wednesday prompts, plus the merge of all extra content */
 const RESCUE = {
 name:["This is a temptation, not an order. You don't have to obey it.",
@@ -3538,6 +3634,15 @@ const OB_STEPS = 8;
 function obInit(){ ui.ob = { step:0, name:"", reasons:[], str:[], moods:[], prac:Object.assign({}, PRAC_DEFAULTS) }; }
 function progBar(){ return `<div class="pbar" aria-hidden="true"><b style="width:${lastPct}%" data-w="${pctNow()}"></b></div>`; }
 function obHead(){ return `<div class="row obhead"><button class="iconbtn quiet" data-a="obBack" aria-label="Back">${I.back}</button><div class="grow">${progBar()}</div></div>`; }
+function isStandalone(){ try{ return window.navigator.standalone===true || (window.matchMedia && matchMedia("(display-mode: standalone)").matches); }catch(e){ return false; } }
+function browserKind(){
+  const ua = navigator.userAgent || "", ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (ios) return /CriOS/.test(ua) ? "ios-chrome" : /FxiOS|EdgiOS|Instagram|FBAN|FBAV|Snapchat|TikTok|GSA\//.test(ua) ? "ios-other" : "ios-safari";
+  return /Android/.test(ua) ? "android" : "desktop";
+}
+function installBlock(){
+  return `<div class="install"><div class="install-t"><span class="ico">${I.phone}</span><div><h3>Add Selah to your Home Screen first</h3><p class="muted small">It opens like an app and keeps your progress there. Do it before you start.</p><button class="install-how" data-a="installHow">How do I do that?<span>${I.chev}</span></button></div></div></div>`;
+}
 function vOnboarding(){
   if (!ui.ob) obInit();
   const o = ui.ob, s = o.step;
@@ -3548,6 +3653,7 @@ function vOnboarding(){
       <h1 class="wordmark">Selah</h1>
       <p class="lead">A daily pause to look honestly at your walk with God, and watch him grow you over time.</p>
       <p class="faint small">SEE-lah · from the Psalms. A pause to reflect.</p>
+      ${isStandalone() ? "" : installBlock()}
     </div><div class="foot"><button class="btn primary lg block" data-a="obNext">Begin</button></div></div>`;
   }
   if (s===1){
@@ -3578,7 +3684,7 @@ function vOnboarding(){
   }
   if (s===7){
     body = `<h1 class="q-t">Before you start</h1>
-      <div class="notes">${[["Private by design","Everything stays on this device. No account, no server."],["Keep it safe","On iPhone, tap Share, then Add to Home Screen. Back up now and then from the You tab."],["One restore a month","Miss a day and you can use one restore each month to keep your streak alive."]].map(([a,b])=>`<div class="note"><i></i><div><h3>${a}</h3><p class="muted small">${b}</p></div></div>`).join("")}</div>`;
+      <div class="notes">${[["Private by design","Everything stays on this device. No account, no server."],["Keep it safe", isStandalone() ? "Back up now and then from the You tab, in case your phone's data is ever cleared." : "Add Selah to your Home Screen if you haven't yet, and back up now and then from the You tab."],["One restore a month","Miss a day and you can use one restore each month to keep your streak alive."]].map(([a,b])=>`<div class="note"><i></i><div><h3>${a}</h3><p class="muted small">${b}</p></div></div>`).join("")}</div>`;
     foot = `<button class="btn primary lg block" data-a="obFinish">Start my first day</button>`;
   }
   if (!foot) foot = `<button class="btn primary lg block" id="ob-next" data-a="obNext" ${canNext?"":"disabled"}>${label}</button>`;
@@ -3691,10 +3797,6 @@ function vToday(){
     h += `<div class="quiet row"><span class="grow">Save a backup in case your browser data is ever cleared.</span><button class="linkbtn" data-a="backupOpen">Back up</button><button class="linkbtn faintbtn" data-a="backupLater">Later</button></div>`;
   }
 
-  const standalone = (window.navigator.standalone===true) || (window.matchMedia && matchMedia("(display-mode: standalone)").matches);
-  if (!standalone && !S.flags.installDismissed){
-    h += `<div class="quiet row"><span class="grow">Add Selah to your Home Screen to keep your progress safe.</span><button class="linkbtn faintbtn" data-a="installDismiss">Got it</button></div>`;
-  }
   return `<div class="stack air">${h}</div>`;
 }
 
@@ -3970,6 +4072,7 @@ function vYou(){
   <section class="card" style="padding:6px 16px"><div class="eyebrow" style="padding:12px 0 4px">Your data</div>
     ${row("backupOpen",I.save,"Back up",S.lastBackupAt?"Last backup "+esc(new Date(S.lastBackupAt).toLocaleDateString("en-US",{month:"short",day:"numeric"})):"Never backed up")}
     ${row("importOpen",I.upload,"Restore from backup","")}
+    ${isStandalone() ? "" : row("installHow",I.phone,"Add to Home Screen","How to install Selah like an app")}
     ${row("aboutOpen",I.info,"About and privacy","")}
     <button class="li" data-a="resetOpen"><span class="ico" style="color:var(--danger)">${I.trash}</span><span class="grow" style="font-weight:600;color:var(--danger)">Erase everything</span></button>
   </section>`;
@@ -4209,6 +4312,22 @@ function sheetHTML(s){
       <input class="field num" id="pin2" type="password" inputmode="numeric" maxlength="4" placeholder="Confirm PIN" autocomplete="off" style="letter-spacing:.5em;text-align:center;font-size:24px">
       <p class="small" id="pin-err" style="color:var(--danger)"></p><button class="btn primary block" data-a="pinSave">Turn on app lock</button></div>`;
   }
+  if (s.type==="install"){
+    const kind = browserKind();
+    const G = {
+      "ios-safari":["Safari on iPhone",["Tap the <b>⋯</b> button next to the address bar. On older iPhones, tap the <b>Share</b> button (a square with an arrow) at the bottom instead.","Tap <b>Share</b>, then scroll down and tap <b>Add to Home Screen</b>.","Keep <b>Open as Web App</b> turned on, then tap <b>Add</b>."]],
+      "ios-chrome":["Chrome on iPhone",["Tap the <b>Share</b> button (a square with an arrow) in the address bar at the top right.","Scroll down and tap <b>Add to Home Screen</b>.","Tap <b>Add</b>."]],
+      "android":["Chrome on Android",["Tap the <b>⋮</b> menu at the top right.","Tap <b>Add to Home screen</b> or <b>Install app</b>.","Tap <b>Install</b> or <b>Add</b>."]]
+    };
+    const order = kind==="ios-chrome" ? ["ios-chrome","ios-safari","android"] : kind==="android" ? ["android","ios-safari","ios-chrome"] : ["ios-safari","ios-chrome","android"];
+    const mine = kind==="ios-safari"||kind==="ios-chrome"||kind==="android" ? kind : null;
+    const sec = k => { const [t,steps] = G[k]; return `<div class="howto ${k===mine?"mine":""}"><div class="howto-h"><h3>${t}</h3>${k===mine?`<span class="tag">You're using this</span>`:""}</div><ol class="steps">${steps.map(x=>`<li>${x}</li>`).join("")}</ol></div>`; };
+    const pre = kind==="ios-other" ? `<p class="muted small">You opened this inside another app. Open it in <b>Safari</b> or <b>Chrome</b> first, then follow the steps below.</p>`
+      : kind==="desktop" ? `<p class="muted small">Selah is made for your phone. Open this page on your phone, then follow the steps below.</p>` : "";
+    return sheetHead("Install","Add to Home Screen")+`<div class="stack">${pre}${order.map(sec).join("")}
+      <div class="note-soft"><b>Then open Selah from the new icon</b> and start there. On iPhone, the Home Screen app keeps its own data, separate from the browser. If you already started in the browser, back up there first and restore from the You tab in the app.</div>
+      <button class="btn primary block" data-a="closeSheet">Got it</button></div>`;
+  }
   if (s.type==="backup"){
     return sheetHead("Your data","Back up")+`<div class="stack"><p class="muted">Save a file with all your reflections, struggles, and progress. Keep it in Files, iCloud, or email it to yourself.</p>
       <button class="btn primary block" data-a="backupFile">Save backup file</button><button class="btn soft block" data-a="backupCopy">Copy backup as text</button>
@@ -4369,6 +4488,7 @@ const A = {
   keyDel: () => { ui.pin = ui.pin.slice(0,-1); render(); },
   forgot: () => openSheet({type:"reset"}),
   backupOpen: () => openSheet({type:"backup"}),
+  installHow: () => openSheet({type:"install"}),
   backupFile: () => { const ok = download("selah-backup-"+todayK()+".json", backupText(), "application/json"); S.lastBackupAt=Date.now(); save(); simpleToast(ok?"Backup saved":"Couldn't save a file here. Use Copy instead."); renderSheet(); render(); },
   backupCopy: async () => { const ok = await copyText(backupText()); if (ok){ S.lastBackupAt=Date.now(); save(); render(); } simpleToast(ok?"Backup copied. Paste it somewhere safe.":"Copy didn't work in this browser."); },
   importOpen: () => openSheet({type:"import"}),
