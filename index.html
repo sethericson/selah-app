@@ -396,6 +396,9 @@ main header h1{font-size:34px;letter-spacing:-.035em}
 @keyframes sheetin{from{opacity:0;transform:translateY(12px)}}
 .toast{background:rgba(37,32,64,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.08)}
 .ob .foot{background:linear-gradient(180deg,rgba(18,14,32,0),rgba(18,14,32,.92) 40%,var(--bg))}
+.rs-minis{display:flex;gap:6px;flex-wrap:wrap}
+.rs-minis i{width:18px;height:18px;border-radius:5px;background:rgba(255,255,255,.07)}
+.opt .chev{color:var(--faint)}
 @media (min-width:600px){.moodgrid{grid-template-columns:repeat(3,1fr)} .ach{grid-template-columns:repeat(4,1fr)}}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
@@ -704,6 +707,72 @@ const V = {
 "1 Samuel 3:10":"And the LORD came and stood and called as at the other times, Samuel, Samuel. Then Samuel answered, Speak, for your servant is listening.",
 "Luke 15:7":"I tell you that there will be more joy in heaven over one sinner who repents than over ninety-nine righteous people who need no repentance."
 };
+
+/* Additional verses: KJV, modernized wording, meaning unchanged. Checked against the KJV text. */
+Object.assign(V, {
+"John 5:44":"How can you believe, when you receive honor from one another and do not seek the honor that comes from God alone?",
+"Matthew 6:1":"Be careful not to do your good deeds in front of people to be seen by them. Otherwise you have no reward from your Father who is in heaven.",
+"Colossians 3:20":"Children, obey your parents in all things, for this is well pleasing to the Lord.",
+"Hebrews 13:17":"Obey those who have authority over you, and submit to them, for they watch over your souls as those who must give an account. Let them do it with joy and not with grief, for that would be no help to you.",
+"1 Peter 2:17":"Honor all people. Love the family of believers. Fear God. Honor the king.",
+"John 20:29":"Jesus said to him, Thomas, because you have seen me, you have believed. Blessed are those who have not seen, and yet have believed.",
+"Proverbs 19:1":"Better is the poor man who walks in his integrity than one who is crooked in his speech and is a fool.",
+"Psalm 15:1-2":"LORD, who may stay in your tent? Who may live on your holy hill? The one who walks uprightly, does what is right, and speaks the truth in his heart.",
+"Psalm 119:37":"Turn my eyes away from looking at worthless things, and give me life in your ways.",
+"Colossians 3:2":"Set your mind on things above, not on things on the earth.",
+"John 4:34":"Jesus said to them, My food is to do the will of the one who sent me, and to finish his work.",
+"Proverbs 20:1":"Wine is a mocker, strong drink is a brawler, and whoever is led astray by it is not wise.",
+"Romans 6:14":"For sin will not have power over you, for you are not under the law, but under grace.",
+"Proverbs 22:24-25":"Do not make friends with an angry man, and do not go with a hot-tempered man, or you will learn his ways and set a trap for your own soul.",
+"Proverbs 18:24":"A man who has friends must show himself friendly, and there is a friend who sticks closer than a brother.",
+"John 15:13":"No one has greater love than this, that someone lays down his life for his friends.",
+"Psalm 119:63":"I am a companion of all who fear you, and of those who keep your commands.",
+"Hebrews 12:3":"Consider him who endured such hostility from sinners against himself, so that you do not grow weary and lose heart.",
+"Psalm 142:3":"When my spirit was overwhelmed within me, you knew my path.",
+"James 5:14-15":"Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord. And the prayer of faith will save the sick, and the Lord will raise him up. And if he has committed sins, they will be forgiven him.",
+"Psalm 6:2":"Have mercy on me, O LORD, for I am weak. O LORD, heal me, for my bones are troubled.",
+"Psalm 3:5":"I lay down and slept; I woke again, for the LORD sustained me.",
+"Psalm 63:6":"When I remember you on my bed, and think about you in the watches of the night.",
+"Psalm 27:1":"The LORD is my light and my salvation; whom shall I fear? The LORD is the strength of my life; of whom shall I be afraid?",
+"Isaiah 41:13":"For I the LORD your God will hold your right hand, saying to you, Do not fear; I will help you.",
+"John 14:18":"I will not leave you as orphans; I will come to you.",
+"John 6:37":"Everyone the Father gives me will come to me, and whoever comes to me I will never cast out.",
+"Ephesians 1:6":"To the praise of the glory of his grace, by which he has made us accepted in the Beloved.",
+"Isaiah 54:10":"For the mountains may depart and the hills be removed, but my kindness will not depart from you, and my covenant of peace will not be removed, says the LORD who has mercy on you.",
+"Psalm 55:12-14":"For it was not an enemy who insulted me; then I could have endured it. It was not one who hated me who raised himself up against me; then I could have hidden from him. But it was you, a man my equal, my companion, and my close friend. We shared sweet fellowship together and walked to the house of God with the crowd.",
+"Genesis 50:20":"As for you, you meant evil against me, but God meant it for good, to bring about what is happening today, to save many people alive.",
+"Luke 19:10":"For the Son of Man came to seek and to save what was lost.",
+"Psalm 34:5":"They looked to him and were radiant, and their faces were not ashamed.",
+"Isaiah 54:4":"Do not fear, for you will not be ashamed; do not be confounded, for you will not be put to shame. You will forget the shame of your youth.",
+"Micah 7:18-19":"Who is a God like you, who pardons iniquity and passes over the wrongdoing of the remnant of his people? He does not stay angry forever, because he delights in mercy. He will again have compassion on us; he will overcome our iniquities. You will throw all our sins into the depths of the sea.",
+"Matthew 5:23-24":"So if you bring your gift to the altar and there remember that your brother has something against you, leave your gift there before the altar and go. First be reconciled to your brother, and then come and offer your gift.",
+"James 5:16":"Confess your faults to one another, and pray for one another, so that you may be healed. The effective, fervent prayer of a righteous person accomplishes much.",
+"Proverbs 28:13":"Whoever covers his sins will not prosper, but whoever confesses and forsakes them will find mercy.",
+"Proverbs 29:11":"A fool lets out all his anger, but a wise man holds it back until later.",
+"Psalm 4:4":"Tremble, and do not sin. Search your own heart on your bed, and be still.",
+"Proverbs 19:11":"A man's good sense makes him slow to anger, and it is his glory to overlook an offense.",
+"Hebrews 12:15":"See to it that no one falls short of the grace of God, and that no root of bitterness springs up and causes trouble, and by it many are defiled.",
+"Romans 12:19":"Dear friends, do not take revenge yourselves, but leave room for God's wrath, for it is written, Vengeance is mine; I will repay, says the Lord.",
+"Luke 6:27-28":"But I say to you who hear, Love your enemies, do good to those who hate you, bless those who curse you, and pray for those who mistreat you.",
+"Exodus 20:17":"You shall not covet your neighbor's house, you shall not covet your neighbor's wife, or his servants, or his ox, or his donkey, or anything that belongs to your neighbor.",
+"Galatians 5:26":"Let us not be hungry for empty glory, provoking one another and envying one another.",
+"Lamentations 3:25-26":"The LORD is good to those who wait for him, to the soul who seeks him. It is good that a person should both hope and quietly wait for the salvation of the LORD.",
+"Psalm 62:1":"Truly my soul waits quietly for God; from him comes my salvation.",
+"James 1:12":"Blessed is the man who endures temptation, for when he has been tested, he will receive the crown of life, which the Lord has promised to those who love him.",
+"Romans 10:17":"So faith comes by hearing, and hearing by the word of God.",
+"Isaiah 55:6":"Seek the LORD while he may be found; call on him while he is near.",
+"Psalm 130:5":"I wait for the LORD, my soul waits, and in his word I put my hope.",
+"Psalm 103:1":"Bless the LORD, O my soul, and all that is within me, bless his holy name.",
+"Ephesians 5:20":"Always giving thanks for all things to God the Father in the name of our Lord Jesus Christ.",
+"Philippians 4:4":"Rejoice in the Lord always. Again I will say, rejoice.",
+"Psalm 126:3":"The LORD has done great things for us, and we are glad.",
+"John 15:11":"I have told you these things so that my joy may remain in you, and that your joy may be full.",
+"Romans 5:1":"Therefore, having been made right with God by faith, we have peace with God through our Lord Jesus Christ.",
+"Hebrews 6:19":"We have this hope as an anchor for the soul, both sure and steadfast.",
+"1 Peter 1:3":"Blessed be the God and Father of our Lord Jesus Christ, who in his great mercy has given us new birth into a living hope through the resurrection of Jesus Christ from the dead.",
+"Psalm 118:23":"This is the LORD's doing; it is marvelous in our eyes.",
+"Ephesians 3:18-19":"That you may be able to understand with all the saints what is the width and length and depth and height, and to know the love of Christ, which goes beyond knowledge, so that you may be filled with all the fullness of God."
+});
 
 /* Struggle catalog. Each item maps to a guidance theme. */
 const CATALOG = [
@@ -1291,6 +1360,1856 @@ const ROOM_STEPS = [
  {name:"Listen",prompt:"Sit quietly. Ask God what he wants to say to you, and give him room to answer.",ref:"1 Samuel 3:10"}
 ];
 
+/* Extra content per feeling, part 1 (v = verse refs, p = prayers, t = tips). Merged in content_merge.js */
+const EXTRA_MOODS = {
+weary:{v:["Psalm 73:26","Hebrews 12:3"],
+p:["Father, I've been running on fumes. I don't need a burst of energy as much as I need you. Be my strength in the small, ordinary hours today. Amen.",
+"Lord, you give power to the faint. I'm faint. Meet me in this tiredness, and help me trust that you are still working while I rest. Amen.",
+"Jesus, you got tired too. You slept in a boat in a storm. Teach me to rest the way you did, trusting the Father completely. Amen.",
+"God, I keep trying to push through on my own. I'm done pretending I can. Carry what I can't, and show me what to put down. Amen.",
+"Lord, renew my strength like you promised. Not so I can do more, but so I can love you and the people around me well today. Amen.",
+"Father, my body is tired and my soul is tired. Be my shepherd. Lead me beside still waters and restore what's been drained. Amen.",
+"Jesus, I bring you my heavy schedule and my heavy heart. Take my yoke and give me yours. Yours is easy, and mine isn't working. Amen."],
+t:["Say no to one thing this week that isn't yours to carry.",
+"Go to bed fifteen minutes earlier tonight, and leave your phone outside your room.",
+"Read Matthew 11:28-30 slowly, then sit quietly for one minute.",
+"Tell someone you trust that you're tired. Being honest is lighter than pretending.",
+"Do the next faithful thing, not every thing. Write down just the next one.",
+"Take a short walk outside without your phone and talk to God while you walk.",
+"Rest is not laziness. God built a Sabbath into the week because you need it."]},
+
+burnedout:{v:["Isaiah 40:31","Exodus 33:14","2 Corinthians 4:16-18"],
+p:["Lord, I've given everything and I feel empty. Fill me again. Remind me that my worth isn't my output. Amen.",
+"Father, I said yes to too much. Forgive me for trying to be everything for everyone. Help me rest without guilt. Amen.",
+"Jesus, you went away to quiet places to pray, even when people needed you. Give me the wisdom to do the same. Amen.",
+"God, I feel like a candle burned to the end. Relight me with your Spirit, slowly and gently. Amen.",
+"Lord, you know my limits better than I do. Help me respect the limits you gave me instead of fighting them. Amen.",
+"Father, I'm tired of performing. Let me just be your child for a while, loved without having to earn it. Amen.",
+"Jesus, restore my joy in the things I used to love. Show me what to step back from and what to keep. Amen."],
+t:["Pick one commitment to pause or drop, even for just this week.",
+"Plan one block of real rest this weekend, with no screens and no to-do list.",
+"Ask a parent, coach, or mentor to help you look at your schedule honestly.",
+"Notice what drains you and what refills you. Write down one of each.",
+"Spend time with God that isn't another task. Just sit and talk.",
+"Burnout often comes from trying to prove something. Remember you're already loved.",
+"Get outside today. Sunlight and fresh air help more than you'd think."]},
+
+overwhelmed:{v:["Psalm 18:2","2 Corinthians 4:8-9","Psalm 142:3"],
+p:["Lord, everything is coming at me at once. Be my rock right now. Help me breathe and take one thing at a time. Amen.",
+"Father, when my spirit is overwhelmed, you know my path. I can't see the whole road, but you can. Lead me. Amen.",
+"Jesus, calm the storm in my head the way you calmed the sea. Speak peace over this. Amen.",
+"God, I'm drowning in what I have to do. Show me what matters today and help me let the rest wait. Amen.",
+"Lord, I'm hard pressed, but not crushed. Remind me of that when it feels like I'm going under. Amen.",
+"Father, I hand you this whole pile. Give me back just the piece I need to deal with right now. Amen.",
+"Jesus, you're not overwhelmed by any of this. Let your calm become my calm. Amen."],
+t:["Write everything down, then circle just one thing to do first.",
+"Take five slow breaths before you decide anything.",
+"Ask for help with one task today. You don't have to carry it alone.",
+"Break the biggest thing into the smallest first step, and do only that.",
+"Put your phone face down. Fewer inputs make it easier to think.",
+"Pray Psalm 61:2: lead me to the rock that is higher than I.",
+"Tomorrow can wait until tomorrow. Focus on the next hour."]},
+
+stressed:{v:["Matthew 11:28-30","Psalm 46:10","Matthew 6:34"],
+p:["Lord, I feel the pressure everywhere. Help me do my best and leave the results with you. Amen.",
+"Father, I'm carrying stress you never asked me to carry. Show me what to give back to you. Amen.",
+"Jesus, I want your peace, not just a break from the pressure. Settle my heart from the inside. Amen.",
+"God, help me work hard without worshiping the outcome. My future is in your hands, not mine. Amen.",
+"Lord, quiet my racing thoughts. Help me focus on what's in front of me right now. Amen.",
+"Father, when I'm stressed I get short with people. Give me patience and kindness even under pressure. Amen.",
+"Jesus, be still in me so I can be still. I want to know you are God, even in this busy week. Amen."],
+t:["Make a simple plan for tomorrow tonight, so your mind can rest.",
+"Do the hardest task first while you still have energy.",
+"Take a two-minute break every hour and pray one short sentence.",
+"Stress feels bigger in the dark. Sleep on it before you decide it's a disaster.",
+"Ask yourself: will this matter in a year? Then act accordingly.",
+"Move your body for a few minutes. It helps your mind reset.",
+"Thank God for three specific things. Gratitude pushes back on stress."]},
+
+sick:{v:["Isaiah 41:10","James 5:14-15","Psalm 6:2","2 Corinthians 4:16-18"],
+p:["Lord, I feel awful. Be near me. Heal my body and give me patience while I wait to get better. Amen.",
+"Father, I'm not good at slowing down. Help me rest and trust that you're still working while I'm stuck. Amen.",
+"Jesus, you healed people with a touch. I ask you to heal me, and to hold me close whatever happens. Amen.",
+"God, give wisdom to the people taking care of me, and help me be thankful for them. Amen.",
+"Lord, when I'm weak, your strength is made perfect. Be strong for me today. Amen.",
+"Father, I'm frustrated about what I'm missing. Help me let go of it and receive this rest. Amen.",
+"Jesus, comfort me tonight. Let me rest in you even if I can't sleep well. Amen."],
+t:["Rest is part of getting better. Don't feel guilty about it.",
+"Tell a parent or doctor how you're really feeling, not just that you're fine.",
+"Ask a friend to pray for you. James says the prayer of faith matters.",
+"Listen to Scripture or a worship song if reading is too much.",
+"Drink water and follow the advice of your doctor.",
+"Use this slower time to talk to God more than usual.",
+"Write down one thing you're thankful for even while you're sick."]},
+
+cantsleep:{v:["Psalm 3:5","Psalm 63:6","Matthew 11:28-30","Psalm 121:7-8"],
+p:["Lord, my mind won't turn off. You never sleep, so I can. Watch over me tonight. Amen.",
+"Father, I give you every thought that's keeping me up. Hold them until morning. Amen.",
+"Jesus, be my peace in the dark. Help my body relax and my heart trust you. Amen.",
+"God, I lay down and I'll wake up again because you sustain me. Let me rest in that. Amen.",
+"Lord, quiet the worries and replays in my head. Fill my mind with your goodness instead. Amen.",
+"Father, I'm restless, but you are near. Let me just be with you, even awake. Amen.",
+"Jesus, give me sweet sleep tonight, and strength for tomorrow if it doesn't come. Amen."],
+t:["Read a short passage of Scripture on paper instead of your phone before bed.",
+"Write your worries on paper so your mind can let go of them.",
+"Hand God each person and problem on your mind, one at a time, and leave them with him.",
+"Breathe in for four counts and out for six, a few times.",
+"If you can't sleep, rest anyway. Lying still with God is not wasted time.",
+"Keep a steady bedtime, even on weekends.",
+"Thank God for one good thing from today as you lie down."]},
+
+anxious:{v:["Psalm 46:1","2 Timothy 1:7"],
+p:["Lord, my chest is tight and my thoughts are spinning. I bring this to you in prayer like you asked. Give me your peace. Amen.",
+"Father, I keep imagining the worst. Help me think about what is true, not just what I fear. Amen.",
+"Jesus, you said don't worry about tomorrow. Help me live in today with you. Amen.",
+"God, you haven't given me a spirit of fear. Replace this anxiety with power, love, and a sound mind. Amen.",
+"Lord, I cast this worry on you because you care for me. Help me not pick it back up. Amen.",
+"Father, you feed the birds and clothe the flowers. You will take care of me too. Help me believe it. Amen.",
+"Jesus, be the calm at the center of this. I trust you more than my feelings right now. Amen."],
+t:["Name the worry out loud, then tell God about it in one sentence.",
+"Ground yourself: notice five things you can see and four you can hear.",
+"Breathe slowly, with your exhale longer than your inhale.",
+"Ask: what is one small thing I can actually do about this?",
+"Talk to someone you trust. Anxiety grows when it's kept secret.",
+"Limit news and social media today. They feed worry.",
+"If anxiety is constant and heavy, tell a parent or counselor. Getting help is wise."]},
+
+afraid:{v:["Psalm 27:1"],
+p:["Lord, I'm scared. You are my light and my salvation. Whom shall I fear? Hold me steady. Amen.",
+"Father, you promised to be with me wherever I go. Be with me in this. Amen.",
+"Jesus, you told your friends not to be afraid. Say that to me right now. Amen.",
+"God, I'm afraid of what might happen. Remind me that you're already there. Amen.",
+"Lord, your perfect love casts out fear. Fill me with it until there's less room for fear. Amen.",
+"Father, when I'm afraid I will trust in you. I'm choosing that right now, even shaking. Amen.",
+"Jesus, hold my hand through this. I don't have to be brave alone. Amen."],
+t:["Tell someone what you're afraid of. Fear shrinks when it's spoken.",
+"Pray Psalm 56:3: when I am afraid, I will trust in you.",
+"Separate what's actually happening from what might happen.",
+"Do one brave small thing today, and thank God for it after.",
+"Read Isaiah 41:10 and say it in your own words.",
+"Stay with safe people if you feel unsafe, and tell an adult.",
+"Remember a time God brought you through something scary before."]},
+
+nervous:{v:["Isaiah 41:13","Proverbs 3:5-6","2 Timothy 1:7"],
+p:["Lord, I'm nervous about what's coming up. Steady my hands and my heart. Amen.",
+"Father, help me prepare well and then trust you with the rest. Amen.",
+"Jesus, I want to do this for you, not to impress anyone. Take away the pressure to be perfect. Amen.",
+"God, hold my right hand. Tell me not to fear, because you will help me. Amen.",
+"Lord, whatever happens, I'm still yours. Let that settle me. Amen.",
+"Father, give me focus and calm. Let me enjoy this instead of just surviving it. Amen.",
+"Jesus, be with me in the room, on the field, or wherever I'll be. Amen."],
+t:["Prepare what you can, then say: the rest is God's.",
+"Nervous energy is just energy. Use it to focus.",
+"Take three slow breaths right before you start.",
+"Pray one sentence before you begin: Lord, this is for you.",
+"Picture yourself doing it calmly, with God beside you.",
+"Remember your worth doesn't depend on how this goes.",
+"Afterward, thank God no matter the result."]},
+
+insecure:{v:["Psalm 139:1-2","Romans 8:38-39","Zephaniah 3:17"],
+p:["Lord, I keep measuring myself against everyone else. Remind me who I am in you. Amen.",
+"Father, you made me on purpose. Help me stop wishing I were someone else. Amen.",
+"Jesus, I want to be secure in your love, not in what people think. Amen.",
+"God, you know everything about me and you still love me. Let that sink in today. Amen.",
+"Lord, quiet the voice that says I'm not enough. Speak louder than it. Amen.",
+"Father, help me see myself through your eyes, not through social media or comparison. Amen.",
+"Jesus, I'm your workmanship. Help me walk confidently in the good works you planned for me. Amen."],
+t:["Say something kind to yourself today, the way a good friend would.",
+"Spend time doing something you enjoy, not something you're trying to prove yourself in.",
+"Notice when you compare, and turn it into a prayer instead.",
+"Your value was settled at the cross, not at school or on the field.",
+"Ask a friend what they appreciate about you, and believe them.",
+"Read Psalm 139 slowly. God made you with care.",
+"Serve someone today. It takes the focus off yourself."]},
+
+confused:{v:["James 1:5","Psalm 119:105","Isaiah 55:8-9"],
+p:["Lord, I don't know what to do. You promised wisdom to anyone who asks, so I'm asking. Amen.",
+"Father, things don't make sense right now. Help me trust you even when I can't see why. Amen.",
+"Jesus, be the light for my next step. I don't need the whole map. Amen.",
+"God, your ways are higher than mine. Help me rest in that instead of panicking. Amen.",
+"Lord, clear the fog in my mind. Show me what's true. Amen.",
+"Father, give me wise people to talk to, and the humility to listen. Amen.",
+"Jesus, I'd rather follow you confused than walk alone sure of myself. Lead me. Amen."],
+t:["Write down the question you're stuck on in one sentence.",
+"Ask a wise adult you trust what they think.",
+"Don't make a big decision while you're upset. Wait a day.",
+"Read a chapter of Proverbs for wisdom.",
+"Pray, then take the next obvious step you know is right.",
+"God often guides through Scripture, wise people, and peace. Look for all three.",
+"Confusion isn't failure. It's part of learning to trust."]},
+
+sad:{v:["Psalm 34:17","John 16:33","Psalm 126:5"],
+p:["Lord, I'm sad and I don't fully know why. Be close to me in it. Amen.",
+"Father, you're near to the brokenhearted. Be near to me today. Amen.",
+"Jesus, you wept too. Thank you that I don't have to fake being okay with you. Amen.",
+"God, weeping may last for the night, but joy comes in the morning. Hold me until morning. Amen.",
+"Lord, comfort me, and bring people around me who will too. Amen.",
+"Father, I give you this heaviness. Lift what I can't lift. Amen.",
+"Jesus, let me feel your love even when I don't feel much else. Amen."],
+t:["Tell someone you're feeling down. You don't have to explain it all.",
+"Go outside for a few minutes. Light and air help.",
+"Listen to a worship song that tells the truth about God.",
+"Be gentle with yourself today. Sad is not the same as bad.",
+"Write a short prayer about how you feel, honestly.",
+"Do one small kind thing for someone else.",
+"Let yourself rest without guilt. Sad days need gentleness."]},
+
+grieving:{v:["Psalm 73:26","Psalm 30:5"],
+p:["Lord, I miss them so much. Hold me in this grief. Amen.",
+"Father, I don't understand why this happened. Be with me in the questions. Amen.",
+"Jesus, you are the resurrection and the life. Give me hope beyond this loss. Amen.",
+"God, comfort me as I mourn. You promised that those who mourn will be comforted. Amen.",
+"Lord, help me remember the good with thankfulness, not just pain. Amen.",
+"Father, some days are harder than others. Give me grace for today. Amen.",
+"Jesus, you wept at your friend's grave. Thank you for weeping with me. Amen."],
+t:["Let yourself cry. Grief is love with nowhere to go.",
+"Talk about the person you lost with someone who knew them.",
+"Write down a favorite memory and thank God for it.",
+"Grief comes in waves. A hard day doesn't mean you're going backward.",
+"Let others help you, even with small things.",
+"Read Revelation 21:4 and hold onto that promise.",
+"If grief feels too heavy to carry, talk to a pastor or counselor.",
+"Visit a place that reminds you of them, and thank God for the time you had."]},
+
+heartbroken:{v:["Psalm 73:26","Isaiah 41:10","Psalm 55:22","Psalm 62:8"],
+p:["Lord, my heart hurts. You heal the brokenhearted. Begin healing mine. Amen.",
+"Father, I feel rejected and empty. Fill that space with your love. Amen.",
+"Jesus, I gave my heart and it got hurt. Help me not close it off completely. Amen.",
+"God, help me let go of what's gone and trust you with what's next. Amen.",
+"Lord, I pour out my heart to you. You are my refuge. Amen.",
+"Father, keep me from bitterness. Help me heal with grace. Amen.",
+"Jesus, remind me I'm deeply loved by you, no matter who left. Amen."],
+t:["Give yourself time. Healing isn't instant.",
+"Avoid scrolling through old photos and messages for now.",
+"Spend time with friends and family who love you.",
+"Write down what you've learned, without blaming yourself.",
+"Pray for the other person, even if it's hard.",
+"Don't rush into something new to fill the gap.",
+"Read Psalm 34:18. God is close to you right now."]},
+
+lonely:{v:["Isaiah 41:10","Psalm 27:10","John 14:18"],
+p:["Lord, I feel alone. Remind me that you're with me always. Amen.",
+"Father, place me in community. Give me real friends who love you. Amen.",
+"Jesus, you won't leave me as an orphan. Come to me now. Amen.",
+"God, help me reach out instead of waiting for someone to notice me. Amen.",
+"Lord, be my closest friend today. Let me talk to you like one. Amen.",
+"Father, show me someone else who's lonely so I can be a friend to them. Amen.",
+"Jesus, even when people are far, you are near. Let me feel that. Amen."],
+t:["Text one person today and ask how they're doing.",
+"Write a short letter to God about how alone you feel.",
+"Sit with someone new at lunch or practice.",
+"Talk to God out loud like a friend on a walk.",
+"Ask God to bring one good friend into your life, and watch for who he sends.",
+"Call a grandparent or relative. They'll love hearing from you.",
+"Serve somewhere. Working alongside people builds friendship."]},
+
+rejected:{v:["John 6:37","Ephesians 1:6","Psalm 34:18","1 Samuel 16:7"],
+p:["Lord, I was left out and it hurts. Thank you that you will never cast me out. Amen.",
+"Father, I'm accepted in your Son. Let that matter more than this rejection. Amen.",
+"Jesus, you were rejected too. You understand this pain. Stay with me in it. Amen.",
+"God, help me not to believe the lie that I'm unwanted. Amen.",
+"Lord, give me grace toward the people who hurt me. Amen.",
+"Father, show me where I truly belong, with people who love you. Amen.",
+"Jesus, you chose me. Let me rest in being chosen. Amen."],
+t:["Remember: one person's no is not God's verdict on you.",
+"Spend time with people who already love you.",
+"Don't replay the moment over and over. Give it to God.",
+"Read John 6:37 and let it sink in.",
+"Ask whether there's anything to learn, without beating yourself up.",
+"Be the one who includes others, because you know how this feels.",
+"Talk to someone you trust about what happened."]},
+
+unloved:{v:["Isaiah 54:10","Isaiah 43:4","Psalm 136:1"],
+p:["Lord, I don't feel loved right now. Show me your love in a way I can see. Amen.",
+"Father, your love for me doesn't change with my feelings. Help me believe it. Amen.",
+"Jesus, you died for me while I was still a sinner. That's real love. Let me rest in it. Amen.",
+"God, your kindness will not depart from me, even if the mountains do. Thank you. Amen.",
+"Lord, open my eyes to the people around me who do care. Amen.",
+"Father, help me love others even when I feel empty, and fill me as I do. Amen.",
+"Jesus, you know what it's like to feel abandoned. Stay with me in this. Amen."],
+t:["Write down three ways God has shown you love this year.",
+"Read 1 John 4:9-10 and notice how God showed his love first.",
+"Spend time with a family member or friend who's easy to be around.",
+"Notice small kindnesses today, and thank God for each one.",
+"Love is often shown in actions. Look for those around you.",
+"Spend time with family, even if it's just a meal.",
+"Do something loving for someone else. It often refills you too."]},
+
+betrayed:{v:["Psalm 55:12-14","Genesis 50:20","Psalm 55:22"],
+p:["Lord, someone I trusted hurt me. You understand betrayal. Be my comfort. Amen.",
+"Father, I want to get back at them. Help me leave justice in your hands. Amen.",
+"Jesus, Judas betrayed you and you still loved. Teach me that kind of love. Amen.",
+"God, what they meant for harm, you can use for good. I'm trusting you with that. Amen.",
+"Lord, help me forgive without pretending it didn't hurt. Amen.",
+"Father, give me wisdom about whether and how to trust them again. Amen.",
+"Jesus, guard my heart from bitterness. Heal what's been broken. Amen."],
+t:["Don't respond while you're furious. Wait and pray first.",
+"Forgiveness isn't saying it's okay. It's giving the debt to God.",
+"Talk to a wise adult about what happened.",
+"Set healthy boundaries if trust has been broken.",
+"Pray for the person who hurt you, even one sentence.",
+"Read Joseph's story in Genesis 37 to 50.",
+"Don't spread the story around. Bring it to God and one trusted person."]},
+
+worthless:{v:["Romans 5:8","1 John 3:1","Isaiah 43:1"],
+p:["Lord, I feel like nothing. You say I'm precious in your sight. Help me believe you. Amen.",
+"Father, you knew every part of me and still sent your Son. That's my worth. Amen.",
+"Jesus, you call me by name. I'm yours. Let that be enough today. Amen.",
+"God, quiet the voices telling me I don't matter. Speak your truth louder. Amen.",
+"Lord, I'm your child. Remind me what that means. Amen.",
+"Father, I'm fearfully and wonderfully made. Help me see what you see. Amen.",
+"Jesus, my worth isn't in my performance. It's in your love. Amen."],
+t:["Write down: God says I am loved, chosen, and his. Read it often.",
+"Tell someone you trust how you're feeling about yourself.",
+"Read Psalm 139:13-16 slowly.",
+"Notice negative self-talk and replace it with what God says.",
+"Do something you're good at, and thank God for the gift.",
+"Spend less time on apps that make you feel small.",
+"If you ever feel like you'd be better off gone, call or text 988 right away, or tell an adult."]},
+
+failure:{v:["2 Corinthians 4:8-9","Philippians 1:6","Isaiah 41:10"],
+p:["Lord, I messed up and I feel like a failure. Remind me that you're not done with me. Amen.",
+"Father, I fall seven times and get back up because of you. Help me get up today. Amen.",
+"Jesus, Peter failed you and you restored him. Restore me too. Amen.",
+"God, my identity isn't my worst moment. Thank you for that grace. Amen.",
+"Lord, teach me what I need to learn, and help me let the rest go. Amen.",
+"Father, your mercy is new every morning. I need it this morning. Amen.",
+"Jesus, finish the good work you started in me. I trust you with it. Amen."],
+t:["Write down what happened and one lesson, then close the notebook.",
+"Failure is an event, not your identity.",
+"Talk to a coach, teacher, or parent about how to improve.",
+"Read Micah 7:8: when I fall, I will rise.",
+"Celebrate one small thing you did right this week.",
+"Try again, even in a small way, soon.",
+"God uses people who failed. The Bible is full of them."]},
+
+lost:{v:["Psalm 32:8","Proverbs 3:5-6","Luke 19:10","Jeremiah 29:11"],
+p:["Lord, I feel lost. You came to seek and save the lost. Find me. Amen.",
+"Father, I don't know where I'm going. Instruct me and teach me the way. Amen.",
+"Jesus, be my shepherd. Lead me back to green pastures. Amen.",
+"God, you have plans for me, plans for good. Show me the next step. Amen.",
+"Lord, I've wandered. Thank you for coming after me. Amen.",
+"Father, give me direction, and the courage to follow it. Amen.",
+"Jesus, I'd rather be lost with you than found without you. Stay with me. Amen."],
+t:["Go back to the basics: read a Gospel, pray daily, go to church.",
+"Talk to a pastor or mentor about where you are.",
+"Write down what you know for sure about God.",
+"Take one faithful step today, even a small one.",
+"Read Luke 15. God runs to the lost.",
+"Spend time with people who are walking closely with God.",
+"Feeling lost can be the start of being found. Keep seeking."]}
+};
+
+/* Extra content per feeling, part 2 */
+Object.assign(EXTRA_MOODS, {
+hopeless:{v:["Psalm 34:18","Romans 8:28","Psalm 62:5-6"],
+p:["Lord, I'm in a dark place. Be the light I can't find on my own. Amen.",
+"Father, you are the God of hope. Fill me with joy and peace as I trust you, even a little. Amen.",
+"Jesus, I'm holding on by a thread. Hold onto me. Amen.",
+"God, you lifted David out of the pit. Lift me too. Amen.",
+"Lord, your mercies haven't run out. Let me see one today. Amen.",
+"Father, I need people around me. Bring someone to me, and help me reach out. Amen.",
+"Jesus, I don't need to feel hopeful to trust you. I'm trusting you right now. Amen."],
+t:["Tell someone today how you're really doing. Don't carry this alone.",
+"Let someone sit with you today. You don't have to talk much.",
+"Remember that feelings, even this one, change over time.",
+"Read Psalm 42 slowly. David felt this too.",
+"Do one tiny thing: drink water, step outside, text a friend.",
+"Ask a parent, pastor, or counselor for help. That's strength, not weakness.",
+"Write down one thing, however small, that is still good."]},
+
+discouraged:{v:["Psalm 42:11","Isaiah 41:10","2 Corinthians 4:8-9"],
+p:["Lord, I'm tired of trying and not seeing results. Help me not give up. Amen.",
+"Father, in due season I'll reap if I don't lose heart. Keep my heart from losing hope. Amen.",
+"Jesus, encourage me like you encouraged your disciples. Amen.",
+"God, remind me of how far you've already brought me. Amen.",
+"Lord, give me strength for one more step. Amen.",
+"Father, bring someone today who can encourage me. Amen.",
+"Jesus, you finish what you start. You started something in me. Amen."],
+t:["Look back at a month ago and notice one thing that's better now.",
+"Encourage someone else today. It often lifts you too.",
+"Read Galatians 6:9 and write it somewhere you'll see it.",
+"Rest before you quit. Sometimes you're just tired.",
+"Tell a friend you're discouraged and ask them to pray.",
+"Celebrate a small win, even a tiny one.",
+"Progress isn't always visible. Keep showing up."]},
+
+numb:{v:["Psalm 73:26","Isaiah 42:3","Lamentations 3:22-23","Psalm 51:10"],
+p:["Lord, I don't feel much of anything right now. Meet me here anyway. Amen.",
+"Father, give me a heart of flesh instead of stone. Soften me. Amen.",
+"Jesus, you don't break a bruised reed. Be gentle with me. Amen.",
+"God, I'm showing up even though I feel nothing. Thank you for receiving me. Amen.",
+"Lord, wake my heart up to you again, slowly. Amen.",
+"Father, I'm thirsty for you even if I can't feel it. Amen.",
+"Jesus, I'm not going to wait to feel close to you before I talk to you. Here I am. Amen."],
+t:["Keep praying even without feelings. Faithfulness matters more than feelings.",
+"Read a Psalm out loud. Sometimes saying it helps you feel it.",
+"Get outside and notice creation. Psalm 19 says the heavens declare God's glory.",
+"Tell someone you trust that you've been feeling numb.",
+"Cut back on endless scrolling. It can dull everything else.",
+"Do something with your hands: serve, build, help.",
+"If numbness lasts a long time, talk to a parent or counselor."]},
+
+ashamed:{v:["Psalm 34:5","Isaiah 54:4","2 Corinthians 5:17"],
+p:["Lord, I'm ashamed of what I did. Thank you that there's no condemnation in you. Amen.",
+"Father, I want to hide, but you call me out of hiding into your mercy. Amen.",
+"Jesus, you carried my shame on the cross. I don't have to carry it anymore. Amen.",
+"God, wash me clean. Make me white as snow. Amen.",
+"Lord, help me look to you and be radiant, not hide my face. Amen.",
+"Father, you ran to the prodigal son. Run to me now. Amen.",
+"Jesus, let your grace speak louder than my shame. Amen."],
+t:["Confess to God, then believe 1 John 1:9 is true for you.",
+"Shame says you are bad. Conviction says you did wrong. Listen to conviction.",
+"Tell one trusted person. Shame grows in secret.",
+"Read Luke 15:11-24 and picture the father running.",
+"Don't punish yourself. Jesus already paid.",
+"Do the next right thing today.",
+"Write down: I am forgiven, and read it when shame comes back."]},
+
+guilty:{v:["Psalm 103:12","Isaiah 1:18","Micah 7:18-19"],
+p:["Lord, I want to stop making excuses for what I did. Give me an honest heart. Amen.",
+"Father, create a clean heart in me, and renew a right spirit. Amen.",
+"Jesus, thank you for paying for this sin. Help me turn away from it. Amen.",
+"God, you throw my sins into the depths of the sea. Let me leave them there. Amen.",
+"Lord, show me if I need to make something right with someone. Amen.",
+"Father, I don't want cheap grace. I want real change. Help me. Amen.",
+"Jesus, thank you that your mercy is bigger than my guilt. Amen."],
+t:["Confess it to God specifically, not vaguely.",
+"If you hurt someone, apologize without excuses.",
+"Make it right where you can: return, repair, or replace.",
+"Read Psalm 51, David's prayer after his worst sin.",
+"Guilt is meant to lead you to God, not away from him.",
+"Ask what led to this, and set up one guardrail.",
+"Once you've confessed, accept the forgiveness. Don't keep re-confessing."]},
+
+hurtsomeone:{v:["Matthew 5:23-24","James 5:16","Ephesians 4:31-32","Proverbs 28:13"],
+p:["Father, show me how my words or actions landed on them, so I can understand and apologize well. Amen.",
+"Father, give me humility to apologize without defending myself. Amen.",
+"Jesus, heal the hurt I caused, and soften their heart toward me. Amen.",
+"God, show me what I need to change so this doesn't keep happening. Amen.",
+"Lord, give me the right words and the right timing. Amen.",
+"Father, if they don't forgive me right away, help me be patient. Amen.",
+"Jesus, help me love them better from here on. Amen."],
+t:["Apologize soon. Don't wait for the perfect moment.",
+"Say: I was wrong, I'm sorry, and I want to make it right.",
+"Don't add but to your apology.",
+"Ask how you can make it right, and actually do it.",
+"Give them space if they need it.",
+"Pray for them by name today.",
+"Reflect on what triggered you, and plan a different response."]},
+
+angry:{v:["Proverbs 29:11","Ephesians 4:31-32","Psalm 4:4","Proverbs 19:11"],
+p:["Lord, I'm angry right now. Help me not sin in my anger. Amen.",
+"Father, slow me down. Help me be quick to listen and slow to speak. Amen.",
+"Jesus, take this heat out of my words before I say something I regret. Amen.",
+"God, show me what's under this anger: hurt, fear, or pride. Amen.",
+"Lord, help me give a soft answer that turns away wrath. Amen.",
+"Father, I give you the right to get even. It's yours, not mine. Amen.",
+"Jesus, be still in me. Calm this storm. Amen."],
+t:["Ask yourself what the other person might be going through.",
+"Breathe slowly and pray one sentence.",
+"Don't text while angry. Write it, then delete it.",
+"Ask: what am I actually upset about?",
+"Talk it through with someone calm.",
+"Burn off energy with a walk or run, then pray.",
+"Come back and talk when you can listen, not just speak."]},
+
+bitter:{v:["Hebrews 12:15","Romans 12:19","Proverbs 19:11","Luke 6:27-28"],
+p:["Lord, I keep replaying what they did. Help me let it go. Amen.",
+"Father, pull up any root of bitterness in me before it spreads. Amen.",
+"Jesus, you forgave the people who crucified you. Help me forgive. Amen.",
+"God, vengeance is yours. I'm giving this to you. Amen.",
+"Lord, bless the person I'm bitter toward. I mean it, even if it's hard. Amen.",
+"Father, heal the hurt underneath the bitterness. Amen.",
+"Jesus, I don't want to carry this anymore. Take it. Amen."],
+t:["Notice when you bring up the old hurt in conversation, and choose to let it go.",
+"Write what they did, then pray over it and tear it up.",
+"Stop rehearsing the story to others.",
+"Forgiveness is a choice first, a feeling later.",
+"Read Matthew 18:21-35.",
+"Ask God to show you one good thing about them.",
+"If the hurt is deep, talk to a pastor or counselor."]},
+
+jealous:{v:["Exodus 20:17","Hebrews 13:5","Psalm 37:1","Galatians 5:26"],
+p:["Lord, I want what they have. Help me be content with what you've given me. Amen.",
+"Father, thank you for my own gifts. Help me stop comparing. Amen.",
+"Jesus, help me celebrate others instead of envying them. Amen.",
+"God, you are enough for me. Let that be true in my heart. Amen.",
+"Lord, show me the good you've placed in my own life. Amen.",
+"Father, bless the person I'm jealous of. Help me mean it. Amen.",
+"Jesus, my story isn't their story. Help me run my own race. Amen."],
+t:["Ask God what he's doing in your own life right now.",
+"Write down five things God has given you.",
+"Limit time on apps that fuel comparison.",
+"Pray for the person's success.",
+"Ask what the jealousy reveals about what you value.",
+"Read Galatians 6:4. Test your own work.",
+"Thank God out loud for one specific gift you have."]},
+
+impatient:{v:["Lamentations 3:25-26","Isaiah 40:31","Galatians 5:22-23","Psalm 62:5-6"],
+p:["Lord, I want it now. Teach me to wait well. Amen.",
+"Father, your timing is better than mine. Help me trust it. Amen.",
+"Jesus, grow patience in me, even if that means waiting. Amen.",
+"God, help me be patient with people who annoy me. Amen.",
+"Lord, it's good to wait quietly for you. Quiet me. Amen.",
+"Father, don't let my impatience push me to rush something you're preparing. Amen.",
+"Jesus, show me what you're doing in me while I wait. Amen."],
+t:["Breathe before you react to a delay.",
+"Use waiting time to pray for someone.",
+"Remember: patience is a fruit of the Spirit. It grows slowly.",
+"Read Habakkuk 2:3.",
+"Ask: what can I do faithfully while I wait?",
+"Be patient with yourself too.",
+"Thank God for one answered prayer from the past."]},
+
+restless:{v:["Psalm 23:1-3","Philippians 4:11","Psalm 62:1","Exodus 33:14"],
+p:["Lord, I can't settle down. Be my rest. Amen.",
+"Father, my soul waits for you. Teach it to be still. Amen.",
+"Jesus, I keep looking for something to fill me. Fill me with you. Amen.",
+"God, help me be content right here, right now. Amen.",
+"Lord, your presence will go with me and give me rest. Amen.",
+"Father, quiet the urge to keep scrolling, moving, chasing. Amen.",
+"Jesus, I find my rest in you. Help me stay there. Amen."],
+t:["Write down what you're restless for, and talk to God about it.",
+"Put your phone in another room for an hour.",
+"Take a walk and pray as you go.",
+"Ask: what am I looking for right now?",
+"Read Psalm 131.",
+"Do one thing slowly and on purpose.",
+"Restlessness often points to a need for God. Turn to him."]},
+
+tempted:{v:["James 1:12","Romans 6:14","Psalm 119:9"],
+p:["Lord, this feels strong, but you are stronger. I'm holding onto you. Amen.",
+"Father, I'm weak, but you are strong. Give me strength to say no. Amen.",
+"Jesus, remind me that this moment will pass, and you'll still be here. Amen.",
+"God, sin won't have power over me because I'm under grace. Help me live it. Amen.",
+"Lord, I want you more than this. Help my desire match my words. Amen.",
+"Father, help me run from this, not flirt with it. Amen.",
+"Jesus, I resist the devil and draw near to you. Come near to me. Amen."],
+t:["Leave the situation physically right now.",
+"Text a friend: pray for me.",
+"Say a verse out loud, like Jesus did in the wilderness.",
+"Ask: what led me here? Change it next time.",
+"Temptation peaks and fades. Wait it out with God.",
+"Remove access: delete the app, block the site, change the setting.",
+"Every no makes the next no easier."]},
+
+doubting:{v:["John 20:29","Psalm 13:1,5","Romans 10:17","James 1:5"],
+p:["Lord, I believe. Help my unbelief. Amen.",
+"Father, I have questions. Thank you that you're not afraid of them. Amen.",
+"Jesus, you met Thomas in his doubt. Meet me in mine. Amen.",
+"God, show me something real about you this week. Amen.",
+"Lord, faith comes by hearing your Word. Help me keep listening. Amen.",
+"Father, I'd rather wrestle with you than walk away. Amen.",
+"Jesus, you're still faithful even when my faith is weak. Amen."],
+t:["Read a book or listen to a talk that takes your questions seriously.",
+"Read the Gospel of John slowly.",
+"Remember times God was faithful before.",
+"Doubt isn't the opposite of faith. Unbelief is. Keep seeking.",
+"Look into good resources that address hard questions.",
+"Keep praying, even honest, messy prayers.",
+"Stay connected to church while you work through it."]},
+
+distant:{v:["Isaiah 55:6","Luke 15:20","Psalm 73:26"],
+p:["Lord, I feel far from you. Draw near to me as I draw near to you. Amen.",
+"Father, I've drifted. Thank you for not drifting from me. Amen.",
+"Jesus, you're knocking. I'm opening the door. Amen.",
+"God, my soul thirsts for you. Satisfy me. Amen.",
+"Lord, show me what's crowded you out, and help me clear it. Amen.",
+"Father, I want to want you more. Amen.",
+"Jesus, you're as close as my next prayer. Here it is. Amen."],
+t:["Spend five minutes alone with God today.",
+"Read one Psalm and pray it back to God.",
+"Go to church or youth group this week.",
+"Worship with a song, even alone in your room.",
+"Ask: what's taken God's place lately?",
+"Tell a friend you feel distant and ask them to pray.",
+"Feelings follow actions. Start with small faithful habits."]},
+
+waiting:{v:["Lamentations 3:25-26","Psalm 130:5","Romans 12:12","Psalm 31:15"],
+p:["Lord, I'm waiting and it's hard. Help me trust your timing. Amen.",
+"Father, my times are in your hands. Help me rest there. Amen.",
+"Jesus, teach me to be faithful in the waiting, not just when it's over. Amen.",
+"God, renew my strength while I wait. Amen.",
+"Lord, I put my hope in your Word. Amen.",
+"Father, if the answer is no or not yet, help me accept it. Amen.",
+"Jesus, show me what you're growing in me while I wait. Amen."],
+t:["Write down what you're waiting for and pray over it daily.",
+"Read about Abraham, Joseph, or David, who all waited long.",
+"Do what's in front of you faithfully.",
+"Waiting isn't wasted. God is working.",
+"Thank God for answered prayers from the past.",
+"Talk to someone who's waited on God before.",
+"Ask God to give you peace, not just the answer."]},
+
+direction:{v:["Jeremiah 29:11","Psalm 37:23-24","Proverbs 16:3","Psalm 37:4-5"],
+p:["Lord, I need direction. Show me your way. Amen.",
+"Father, I commit this decision to you. Establish my plans. Amen.",
+"Jesus, I want your will more than mine. Lead me. Amen.",
+"God, give me wisdom, and the peace that comes with it. Amen.",
+"Lord, close the doors I shouldn't walk through. Amen.",
+"Father, help me delight in you first, and trust you with the rest. Amen.",
+"Jesus, guide my steps one at a time. Amen."],
+t:["Write down your options and pray over each.",
+"Ask two wise people for advice.",
+"Ask: which option honors God most?",
+"Look for peace, not just excitement.",
+"Read Proverbs 3:5-6 before deciding.",
+"Don't rush. Waiting can be wise.",
+"Take the next step you know is right."]},
+
+grateful:{v:["Psalm 118:24","Psalm 103:1","Ephesians 5:20"],
+p:["Lord, thank you. I see your goodness today. Amen.",
+"Father, thank you for the ordinary things I usually overlook. Amen.",
+"Jesus, thank you for saving me. Let gratitude spill into how I live. Amen.",
+"God, help me remember this gratitude on harder days. Amen.",
+"Lord, I bless your name with all that's in me. Amen.",
+"Father, thank you for the people in my life. Amen.",
+"Jesus, help me give thanks in all things, not just good things. Amen."],
+t:["Write down five things you're thankful for.",
+"Thank someone in person today.",
+"Tell God thanks out loud.",
+"Write a thank-you note to someone who helped you.",
+"Notice small gifts: a meal, a laugh, a sunset.",
+"Share what God's done with a friend.",
+"Remember today's gratitude when tomorrow is hard."]},
+
+joyful:{v:["Romans 15:13","Philippians 4:4","Psalm 126:3","John 15:11"],
+p:["Lord, my heart is full. Thank you for this joy. Amen.",
+"Father, thank you for days like this. Help me remember them. Amen.",
+"Jesus, keep my joy rooted in you, not just in how today went. Amen.",
+"God, you've done great things for me, and I'm glad. Amen.",
+"Lord, help me rejoice in you, not just in good circumstances. Amen.",
+"Father, let me share this joy with someone who needs it. Amen.",
+"Jesus, thank you for this day. I'm glad in it. Amen."],
+t:["Text someone and tell them why you're thankful for them.",
+"Thank God specifically for what made you happy.",
+"Encourage someone who's struggling.",
+"Write down this moment so you can remember it later.",
+"Sing or listen to a worship song.",
+"Do something kind with your extra energy.",
+"Joy is a fruit of the Spirit. Thank him for growing it."]},
+
+peaceful:{v:["Psalm 23:1-3","Psalm 46:10","Philippians 4:6-7","Romans 5:1"],
+p:["Jesus, help me notice you in the quiet moments today. Amen.",
+"Father, I have peace with you through Jesus. Thank you. Amen.",
+"Jesus, your peace isn't like the world's. Guard my heart with it. Amen.",
+"God, help me carry this peace into tomorrow. Amen.",
+"God, thank you that your peace doesn't depend on everything being perfect. Amen.",
+"Father, make me a peacemaker today. Amen.",
+"Jesus, I'm still and I know you are God. Thank you. Amen."],
+t:["Spend a few minutes outside and thank God for what you see.",
+"Sit quietly with God for a few minutes.",
+"Share peace with someone who's stressed.",
+"Write down what you're thankful for right now.",
+"Guard this peace. Limit what disturbs it.",
+"Read Psalm 23 slowly.",
+"Thank God for this calm moment."]},
+
+hopeful:{v:["Romans 8:28","Psalm 31:24","Lamentations 3:22-23","Hebrews 6:19","1 Peter 1:3"],
+p:["Lord, I feel hope again. Thank you. Amen.",
+"Father, my hope is an anchor in you. Hold me steady. Amen.",
+"Jesus, because you rose, I have a living hope. Amen.",
+"God, I trust you with what's ahead. Amen.",
+"Lord, let my hope encourage someone else. Amen.",
+"Father, keep my hope in you, not just in things working out. Amen.",
+"Jesus, thank you for this new day and new mercies. Amen."],
+t:["Read Hebrews 6:19 and picture hope as an anchor.",
+"Pray for someone who needs hope today.",
+"Read Romans 15:13.",
+"Take one step toward what you're hoping for.",
+"Thank God for what he's already done.",
+"Keep a list of answered prayers.",
+"Hope in God, not in outcomes."]},
+
+won:{v:["1 Corinthians 10:31","James 1:17","Philippians 4:13","Psalm 118:23"],
+p:["Lord, thank you for this win. Let me give you the glory. Amen.",
+"Father, keep me humble in success. Amen.",
+"Jesus, I did my part, but you gave me the ability. Thank you. Amen.",
+"God, help me celebrate well and treat others kindly. Amen.",
+"Lord, this is your doing, and it's marvelous to me. Amen.",
+"Father, let this win point to you. Amen.",
+"Jesus, help me stay faithful in the next season, win or lose. Amen."],
+t:["Thank God before you celebrate.",
+"Ask God how you can use this to help someone else.",
+"Be gracious to those who didn't win.",
+"Write down this moment so you remember God's faithfulness.",
+"Stay humble. Pride comes before a fall.",
+"Give God credit when people praise you.",
+"Use your platform to encourage someone."]},
+
+motivated:{v:["Ephesians 2:10","Proverbs 16:3","Galatians 6:9","2 Timothy 4:7"],
+p:["Lord, I'm ready to go. Point this energy in the right direction. Amen.",
+"Father, I commit my work to you. Establish it. Amen.",
+"Jesus, help me finish what I start. Amen.",
+"God, I want to work hard for you, not for applause. Amen.",
+"Lord, keep me from burning out. Help me pace myself. Amen.",
+"Father, show me the good works you planned for me. Amen.",
+"Jesus, help me stay motivated by love for you, not by fear of failing. Amen."],
+t:["Write down one goal and the first step.",
+"Do the hardest thing first while you're motivated.",
+"Invite God into your plans.",
+"Share your goal with someone who'll encourage you.",
+"Build a habit, not just a burst of effort.",
+"Rest too. Motivation comes and goes.",
+"Work as for the Lord, not for people."]},
+
+newstart:{v:["Philippians 3:13-14","Ezekiel 36:26","Psalm 51:10","Philippians 1:6"],
+p:["Lord, thank you for a fresh start. Help me walk in it. Amen.",
+"Father, I'm a new creation. The old has gone. Thank you. Amen.",
+"Jesus, give me a new heart and a new spirit. Amen.",
+"God, help me forget what's behind and press on. Amen.",
+"Lord, guard this new beginning. Amen.",
+"Father, show me one habit to build this week. Amen.",
+"Jesus, finish the good work you've started in me. Amen."],
+t:["Write down why you're starting fresh.",
+"Pick one small daily habit.",
+"Tell someone about your new start.",
+"Remove one thing that pulled you back before.",
+"Read 2 Corinthians 5:17.",
+"Don't wait for Monday. Start today.",
+"If you stumble, start again. Grace covers that too."]},
+
+loved:{v:["Romans 8:38-39","Ephesians 3:18-19","Psalm 136:1","Isaiah 54:10"],
+p:["Lord, I feel your love today. Thank you. Amen.",
+"Father, your love is wide and long and high and deep. Help me grasp it. Amen.",
+"Jesus, I love because you first loved me. Let me pass it on. Amen.",
+"God, help me rest in your love instead of trying to earn it. Amen.",
+"Lord, help me remember this on days I don't feel loved. Amen.",
+"Father, let your love overflow to someone today. Amen.",
+"Jesus, nothing can separate me from your love. Thank you. Amen."],
+t:["Tell someone you love them today.",
+"Write down how you've felt loved this week.",
+"Show love to someone who might feel unloved.",
+"Thank God for his love out loud.",
+"Read 1 Corinthians 13 and pick one thing to practice.",
+"Remember this when hard days come.",
+"Love is a verb. Show it.",
+"Let God's love for you shape how you treat yourself today."]}
+});
+
+/* Extra content per struggle type: v = verses, p = prayers, t = tips, q = one-line prayers (help + advice cards), a = in-the-moment actions (help flow) */
+const EXTRA_THEMES = {
+purity:{v:[],
+p:["Lord, I want a pure heart more than I want this. Change my desires from the inside. Amen.",
+"Father, help me see people as your image-bearers, not objects. Guard my eyes and my mind. Amen.",
+"Jesus, you know how strong this pull is. Be stronger in me. Amen.",
+"God, I don't want to live a double life. Make me the same person in private as in public. Amen.",
+"Lord, thank you that my body is a temple of your Spirit. Help me honor you with it. Amen.",
+"Father, when I'm lonely, bored, or stressed, this is where I run. Teach me to run to you instead. Amen.",
+"Jesus, I'd rather fight this with you than hide it from you. Here's my honest heart. Amen."],
+t:["Put real filters and blocks on your devices, and let someone else hold the passcode.",
+"Have a plan for the moment it hits: where you'll go, who you'll text, and what you'll pray.",
+"Find one trusted person you can be honest with about this.",
+"Keep your phone out of your bedroom at night.",
+"Fill your mind with good things. What you feed grows.",
+"When a thought comes, don't argue with it. Turn your attention to something else and pray.",
+"Falling doesn't make you a fraud. Get up, confess, and keep going."],
+q:["Lord, guard my eyes and my heart right now.","Jesus, you're better than this. Help me believe it.","Father, give me the way out, and the strength to take it.","Holy Spirit, fill the empty place I'm trying to fill.","God, make my heart clean.","Lord, I choose you over this moment.","Jesus, help me look away and look to you.","Father, I'm weak. Be strong in me.","Lord, I want to be pure. Help me want it more.","God, keep me honest and keep me close."],
+a:["Put your phone in another room right now.","Leave the room you're in and go where other people are.","Turn on all the lights and open a door.","Go for a walk outside without your phone.","Text a friend: can you pray for me right now?","Close every tab and app, then put the device down.","Get up and do something with your hands: dishes, laundry, a chore.","Read a Psalm out loud.","Go get a glass of water and sit in the kitchen or living room.","Put on a worship song and sing along."]},
+
+anger:{v:[],
+p:["Lord, my temper gets ahead of me. Put a guard on my mouth. Amen.",
+"Father, show me the hurt or fear under my anger. Heal that. Amen.",
+"Jesus, you were angry without sinning. Teach me that kind of self-control. Amen.",
+"God, I've hurt people with my anger. Forgive me, and help me make it right. Amen.",
+"Lord, help me forgive the way you forgave me. Amen.",
+"Father, slow me down. Let me listen before I react. Amen.",
+"Jesus, make me a peacemaker instead of a fighter. Amen."],
+t:["Learn your early warning signs: hot face, tight jaw, loud voice. Step away when they show.",
+"Agree with yourself on a pause rule: no responding until you've breathed and prayed.",
+"Name what you feel underneath: hurt, embarrassed, ignored, afraid.",
+"Apologize quickly after you blow up. Don't let it sit.",
+"Don't go to bed angry. Settle it, or give it to God.",
+"Exercise and sleep make a real difference in patience.",
+"Ask someone close to you to tell you when you're getting heated."],
+q:["Lord, slow me down right now.","Jesus, put a guard on my mouth.","Father, calm me before I say something I regret.","God, show me what's really hurting.","Lord, help me answer softly.","Holy Spirit, give me self-control.","Jesus, I give you my right to get even.","Father, help me listen first.","God, I don't want to sin in my anger.","Lord, make me a peacemaker right now."],
+a:["Walk away for ten minutes. Say: I need a minute.","Breathe in for four counts and out for six, five times.","Go outside and walk fast for a few minutes.","Don't send that text. Put the phone down.","Unclench your hands and relax your shoulders.","Drink a glass of water slowly.","Write what you want to say on paper, then don't send it.","Pray the words: Lord, help me.","Lower your voice on purpose.","Ask yourself: what am I actually upset about?"]},
+
+speech:{v:[],
+p:["Lord, let the words of my mouth please you today. Amen.",
+"Father, I've said things that tore people down. Forgive me and help me build them up. Amen.",
+"Jesus, help me stop talking about people behind their backs. Amen.",
+"God, set a guard over my mouth and keep watch over my lips. Amen.",
+"Lord, help me speak life, not death. Amen.",
+"Father, give me the courage to change the subject when gossip starts. Amen.",
+"Jesus, let my words sound like you. Amen."],
+t:["When you're frustrated, wait until you're calm before you say anything about someone.",
+"When gossip starts, change the subject or walk away.",
+"Replace one complaint today with one thanks.",
+"Notice who you're with when your language gets worse.",
+"Notice the people you complain about most, and pray for them instead.",
+"If you joked at someone's expense, apologize.",
+"Talk about people as if they're standing next to you."],
+q:["Lord, guard my mouth right now.","Jesus, let my words build up, not tear down.","Father, help me stay quiet if I can't be kind.","God, make my words please you.","Lord, help me speak life.","Holy Spirit, check me before I speak.","Jesus, help me walk away from gossip.","Father, give me better words.","God, help me encourage someone instead.","Lord, let my words be true and kind."],
+a:["Stop mid-sentence if you need to. It's okay.","Change the subject to something else.","Walk away from the conversation.","Say one kind thing about the person instead.","Close the group chat for now.","Count to five before you reply.","Ask: would I say this to their face?","Text someone an encouragement instead.","Pray silently for the person being talked about.","Put the phone down and come back later."]},
+
+pride:{v:[],
+p:["Lord, I've been acting like the world revolves around me. Humble me gently. Amen.",
+"Father, everything I have is from you. Help me remember it. Amen.",
+"Jesus, you washed feet. Teach me to serve. Amen.",
+"God, help me listen to correction without getting defensive. Amen.",
+"Lord, I don't need to be right all the time. Help me let it go. Amen.",
+"Father, I judge others too quickly. Show me my own heart first. Amen.",
+"Jesus, let me think of myself less and of others more. Amen."],
+t:["Ask someone for feedback, and just listen.",
+"Do something kind that no one will see.",
+"Admit you were wrong about something this week.",
+"Celebrate someone else's success out loud.",
+"Notice when you interrupt, and stop.",
+"Thank God for your gifts instead of taking credit for them.",
+"Serve in a way that feels beneath you."],
+q:["Lord, humble me right now.","Jesus, help me serve instead of be served.","Father, I don't need to win this.","God, help me listen.","Lord, everything I have comes from you.","Jesus, show me my own heart first.","Father, help me admit I'm wrong.","God, let others shine today.","Lord, make me teachable.","Jesus, I want to be like you, humble and kind."],
+a:["Say: you might be right.","Ask a question instead of making a point.","Let someone else go first.","Compliment someone sincerely.","Stop arguing and listen for two minutes.","Do a small chore nobody asked you to do.","Thank someone who helped you.","Pray for the person you're judging.","Admit one mistake out loud.","Step back and let someone else lead."]},
+
+envy:{v:[],
+p:["Lord, I keep looking at what others have. Help me see what you've given me. Amen.",
+"Father, I'm tired of comparing. Help me run my own race. Amen.",
+"Jesus, you are enough. Make me content in you. Amen.",
+"God, help me rejoice when others rejoice. Amen.",
+"Lord, forgive my ungrateful heart. Open my eyes to your gifts. Amen.",
+"Father, social media makes me envious. Help me guard my heart. Amen.",
+"Jesus, my life is yours, not a competition. Amen."],
+t:["When you see someone's highlight, say a quick prayer of thanks for your own life.",
+"Mute or unfollow accounts that stir up envy.",
+"Congratulate someone sincerely today.",
+"Remember: you see their highlight reel, not their whole life.",
+"Ask God what he wants you to focus on.",
+"Give something away. Generosity breaks envy's grip.",
+"Pray for the person you envy."],
+q:["Lord, help me be content right now.","Jesus, you are enough for me.","Father, thank you for what you've given me.","God, help me celebrate others.","Lord, take my eyes off them and put them on you.","Jesus, I run my own race.","Father, forgive my comparing heart.","God, open my eyes to your gifts.","Lord, bless them, and help me mean it.","Jesus, my worth is in you."],
+a:["Close the app you're scrolling.","Write down three things you're thankful for.","Text the person a sincere congratulations.","Look at a photo of a good memory.","Pray for the person by name.","Go do something you enjoy.","Read Philippians 4:11-13.","Talk to God about what you're really wanting.","Give something away today.","Step outside and notice something good."]},
+
+approval:{v:["John 5:44","Matthew 6:1"],
+p:["Lord, I've been shaping myself around other people's opinions. Shape me around yours instead. Amen.",
+"Father, I'm already approved in your Son. Let that be enough. Amen.",
+"Jesus, help me say no when I need to, even if people are disappointed. Amen.",
+"God, I don't want to be fake. Help me be who you made me to be. Amen.",
+"Lord, free me from needing likes and compliments. Amen.",
+"Father, help me serve people without needing to please them. Amen.",
+"Jesus, you lived for an audience of one. Teach me to do the same. Amen."],
+t:["Notice when you change who you are around certain people.",
+"Before you post anything, ask yourself why you're posting it.",
+"Post less, or not at all, for a week.",
+"Do one good thing in secret.",
+"Ask: am I doing this for God or for them?",
+"Spend time with people who accept you as you are.",
+"Remember that God's opinion of you is settled."],
+q:["Lord, your approval is enough.","Jesus, I live for you, not for them.","Father, help me be real.","God, free me from needing their yes.","Lord, help me say no kindly.","Jesus, I'm already accepted in you.","Father, help me not perform.","God, let me care more about you than about likes.","Lord, give me courage to be myself.","Jesus, you see me, and that's enough."],
+a:["Put your phone down and don't check for likes.","Say no to one thing you don't want to do.","Read Galatians 1:10.","Do one kind thing in secret.","Tell God what you're afraid people will think.","Delete a post you made for approval.","Be honest in your next conversation.","Spend time with someone who accepts you.","Write: God already approves of me.","Pray for the people whose approval you crave."]},
+
+honor:{v:["Colossians 3:20","Hebrews 13:17","1 Peter 2:17"],
+p:["Lord, help me honor my parents, even when it's hard. Amen.",
+"Father, I've been disrespectful. Forgive me and help me change. Amen.",
+"Jesus, you submitted to your Father. Teach me humility. Amen.",
+"God, help me see my parents and leaders the way you do. Amen.",
+"Lord, give me a respectful tone, even when I disagree. Amen.",
+"Father, bless my parents today. Amen.",
+"Jesus, help me obey with a good attitude, not just outwardly. Amen."],
+t:["Say thank you to your parents for one specific thing.",
+"Use a respectful tone even when you're asking for something you want.",
+"Disagree respectfully: lower your voice and listen.",
+"Apologize if you were disrespectful.",
+"Pray for your parents and teachers by name.",
+"Remember they're people too, with their own stresses.",
+"Ask a parent how their day was."],
+q:["Lord, help me respond with respect.","Jesus, give me a humble heart.","Father, bless my parents.","God, help me listen before I talk back.","Lord, soften my tone.","Jesus, help me obey with a good attitude.","Father, show me how to honor them today.","God, forgive my disrespect.","Lord, help me see their side.","Jesus, make me easy to lead."],
+a:["Take a breath before you answer.","Say: okay, I'll do it.","Go to your room to cool off, then come back calm.","Apologize for your tone.","Do the thing you were asked to do right now.","Write down what you're upset about to talk about later.","Pray for your parent before the next conversation.","Thank them for something.","Lower your voice.","Ask a calm question instead of arguing."]},
+
+anxiety:{v:[],
+p:["Lord, my mind keeps racing ahead. Bring me back to today. Amen.",
+"Father, I give you the what-ifs. You're already in tomorrow. Amen.",
+"Jesus, you said peace I leave with you. I'm asking for it. Amen.",
+"God, help me think about what is true and good. Amen.",
+"Lord, I'm not in control, and that's okay because you are. Amen.",
+"Father, quiet my body and my mind. Amen.",
+"Jesus, help me cast this on you and leave it there. Amen."],
+t:["Write down your worries, then pray over each one.",
+"Limit news and endless scrolling.",
+"Get enough sleep. Anxiety grows when you're tired.",
+"Breathe slowly when you notice your heart racing.",
+"Talk to someone you trust about what's worrying you.",
+"Focus on what you can control, and give God the rest.",
+"If anxiety is heavy most days, ask a parent about seeing a counselor."],
+q:["Lord, give me peace right now.","Jesus, I give you this worry.","Father, you're already in tomorrow.","God, quiet my mind.","Lord, I trust you more than my fears.","Jesus, be my calm.","Father, help me breathe.","God, help me focus on today.","Lord, you've got this.","Jesus, I cast this on you."],
+a:["Breathe in for four, out for six, five times.","Name five things you can see.","Write the worry down in one sentence.","Put your phone face down.","Step outside for a minute.","Drink a glass of water.","Read Philippians 4:6-7 slowly.","Text someone you trust.","Do one small task you can control.","Say out loud: God is with me."]},
+
+doubt:{v:["John 20:29"],
+p:["Lord, I have questions I can't answer. Help me seek you honestly. Amen.",
+"Father, I want to believe more. Strengthen my faith. Amen.",
+"Jesus, show me you're real in a way I can recognize. Amen.",
+"God, keep me close even when I'm unsure. Amen.",
+"Lord, give me wise people to talk to. Amen.",
+"Father, help me remember what you've already done. Amen.",
+"Jesus, you didn't push Thomas away. Don't push me away. Amen."],
+t:["Write down your questions and ask a pastor or mentor.",
+"Read one Gospel start to finish.",
+"Keep praying, even if it feels like talking to a wall.",
+"Remember past times God came through.",
+"Stay connected to church while you wrestle.",
+"Look for thoughtful Christian books on your questions.",
+"Doubt is a reason to seek, not to quit."],
+q:["Lord, I believe. Help my unbelief.","Jesus, show me you're real.","Father, keep me close.","God, I want to trust you more.","Lord, meet me in my questions.","Jesus, don't let me go.","Father, remind me of your faithfulness.","God, give me faith for today.","Lord, I'm seeking you.","Jesus, help me hold on."],
+a:["Read John 20:24-29.","Write down one question you have.","Text a mentor and ask to talk.","Remember one time God was faithful.","Pray honestly, even if it's messy.","Listen to a worship song.","Read a Psalm of lament, like Psalm 13.","Write down what you do believe.","Go for a walk and talk to God.","Plan to go to church this week."]},
+
+devotion:{v:[],
+p:["Lord, I've treated you like an add-on to my day. Make you the center of it again. Amen.",
+"Father, give me a hunger for your Word. Amen.",
+"Jesus, I want to spend time with you because I love you, not out of guilt. Amen.",
+"God, wake up my heart. Amen.",
+"Lord, help me make room for you in my busy days. Amen.",
+"Father, I've been going through the motions. Make it real again. Amen.",
+"Jesus, help me not be ashamed to follow you. Amen."],
+t:["Set a specific time and place to read the Bible each day.",
+"Start small: one chapter or even one verse.",
+"Pray before you check your phone in the morning.",
+"Go to church and youth group consistently.",
+"Find a friend to read the Bible with.",
+"Worship with music during your commute or practice warmup.",
+"Tell someone about what God's doing in your life."],
+q:["Lord, I want you first.","Jesus, wake my heart up.","Father, give me hunger for your Word.","God, help me make time for you.","Lord, make this real again.","Jesus, I love you. Help me show it.","Father, draw me close.","God, help me not be ashamed of you.","Lord, I'm here. Speak.","Jesus, be my first thought today."],
+a:["Open your Bible and read one chapter.","Pray for two minutes right now.","Put a worship song on.","Text a friend to read the Bible with you.","Write down one thing you're thankful to God for.","Plan when you'll spend time with God tomorrow.","Read Psalm 63.","Silence your phone for ten minutes.","Ask God what he wants from you today.","Sign up for youth group or a Bible study."]},
+
+selfworth:{v:[],
+p:["Lord, the voice in my head is cruel. Replace it with your voice. Amen.",
+"Father, I'm your child. Help me believe it. Amen.",
+"Jesus, you think I'm worth dying for. Let that change how I see myself. Amen.",
+"God, I carry shame I don't need to carry. Take it. Amen.",
+"Lord, help me speak to myself the way you speak to me. Amen.",
+"Father, I'm made in your image. Help me treat myself with respect. Amen.",
+"Jesus, my worth isn't in grades, sports, or looks. It's in you. Amen."],
+t:["Notice negative self-talk and write down what God says instead.",
+"Talk to yourself like you'd talk to a friend.",
+"Read Psalm 139 and underline what's true about you.",
+"Limit apps that make you feel worse about yourself.",
+"Tell someone you trust how you've been feeling.",
+"Serve someone. It reminds you that you have something to give.",
+"If you ever feel like you'd be better off gone, call or text 988 or tell an adult right away."],
+q:["Lord, tell me who I am.","Jesus, I'm yours.","Father, quiet the cruel voice.","God, I'm made in your image.","Lord, help me see what you see.","Jesus, my worth is in you.","Father, take my shame.","God, I'm loved.","Lord, speak louder than my thoughts.","Jesus, help me be kind to myself."],
+a:["Write down three things God says about you.","Read Psalm 139:13-16.","Text someone who makes you feel loved.","Close the app that's making you feel bad.","Say out loud: I am loved by God.","Do something you're good at.","Look in the mirror and pray a blessing over yourself.","Write down one thing you did well today.","Go be around people who care about you.","If you're in danger, call or text 988 now."]},
+
+honesty:{v:["Proverbs 19:1","Psalm 15:1-2"],
+p:["Lord, I've been lying. Help me tell the truth, even when it costs me. Amen.",
+"Father, make me a person of integrity. Amen.",
+"Jesus, you are the truth. Help me walk in it. Amen.",
+"God, I've been fake. Help me be real. Amen.",
+"Lord, give me the courage to come clean. Amen.",
+"Father, help me be honest in small things. Amen.",
+"Jesus, help me make things right where I've been dishonest. Amen."],
+t:["Tell the truth the first time, even if it's uncomfortable.",
+"Keep your promises, even small ones. Integrity starts there.",
+"Notice when you exaggerate, and stop.",
+"Don't cheat, even on small things.",
+"Return anything that isn't yours.",
+"Ask: what am I afraid of if I tell the truth?",
+"Integrity means being the same in private and public."],
+q:["Lord, help me tell the truth.","Jesus, give me courage to be honest.","Father, make me a person of integrity.","God, help me come clean.","Lord, I don't want to be fake.","Jesus, you are the truth.","Father, help me be honest in small things.","God, give me the right words.","Lord, I trust you with the consequences.","Jesus, help me make it right."],
+a:["Correct what you just said.","Tell the person the real story.","Give back what isn't yours.","Close the tab or answer key.","Say: I need to be honest with you.","Write down the truth before you talk.","Ask God for courage, then do it.","Don't add details that aren't true.","Admit what you did to a parent.","Pray for strength to face the consequences."]},
+
+discipline:{v:["2 Timothy 1:7"],
+p:["Lord, I keep putting things off. Help me start. Amen.",
+"Father, help me be faithful in small things. Amen.",
+"Jesus, help me use my time well. Amen.",
+"God, give me self-control. Amen.",
+"Lord, help me work hard for you. Amen.",
+"Father, help me keep my commitments. Amen.",
+"Jesus, help me say no to comfort when I need to say yes to what's right. Amen."],
+t:["Start with just five minutes.",
+"Do the hardest task first.",
+"Work in short focused blocks with real breaks in between.",
+"Make a short to-do list each night.",
+"Set a consistent wake-up time.",
+"Ask someone to check in on your progress.",
+"Celebrate small wins."],
+q:["Lord, help me start right now.","Jesus, give me self-control.","Father, help me be faithful.","God, help me use my time well.","Lord, give me energy.","Jesus, help me finish.","Father, help me say no to distraction.","God, I work for you.","Lord, help me keep going.","Jesus, help me do the next thing."],
+a:["Set a timer for five minutes and start.","Put your phone in another room.","Write down the very first step.","Get up and get dressed.","Clear your desk.","Text someone your goal for the next hour.","Do the hardest task first.","Turn off notifications.","Take a short walk, then start.","Say: Lord, help me start."]},
+
+screens:{v:["Psalm 119:37","Colossians 3:2","Psalm 46:10"],
+p:["Lord, my phone has too much of me. Help me take my time back. Amen.",
+"Father, help me be present with the people around me. Amen.",
+"Jesus, turn my eyes from worthless things. Amen.",
+"God, I want to fill my mind with good things. Amen.",
+"Lord, help me rest without a screen. Amen.",
+"Father, show me which apps to delete. Amen.",
+"Jesus, be my first thought in the morning, not my phone. Amen."],
+t:["Charge your phone outside your bedroom so it isn't the first thing you reach for.",
+"Keep your phone out of your bedroom at night.",
+"Delete one app for a week.",
+"Turn off non-essential notifications.",
+"Pray before you open social media.",
+"Set your phone to grayscale.",
+"Plan screen-free time with family or friends."],
+q:["Lord, help me put this down.","Jesus, be my first thought.","Father, help me be present.","God, turn my eyes to you.","Lord, help me rest without a screen.","Jesus, give me self-control.","Father, help me use my time well.","God, fill my mind with good.","Lord, I want you more than this.","Jesus, help me look up."],
+a:["Put your phone in another room.","Close the app right now.","Turn your phone face down.","Set a screen time limit.","Delete one app.","Go talk to someone in person.","Read a chapter of Scripture.","Go outside for ten minutes.","Turn on grayscale.","Pray before picking it back up."]},
+
+food:{v:["1 Corinthians 6:19-20","Psalm 34:8","John 4:34"],
+p:["Lord, I've been using food to cope. Help me come to you instead. Amen.",
+"Father, help me eat with gratitude and self-control. Amen.",
+"Jesus, you're the bread of life. Fill me with you. Amen.",
+"God, help me notice when I'm eating because I'm stressed or sad. Amen.",
+"Lord, my body is a temple. Help me take care of it with balance. Amen.",
+"Father, help me enjoy food as a gift without letting it control me. Amen.",
+"Jesus, satisfy the hunger that food can't fill. Amen."],
+t:["Pause and pray before eating.",
+"Notice if you're eating because of stress, boredom, or sadness.",
+"Eat with others at the table when you can.",
+"Find another way to cope, like a walk or talking to someone.",
+"Thank God for each meal.",
+"Avoid eating in front of screens.",
+"If eating feels out of control, talk to a parent or doctor."],
+q:["Lord, help me come to you instead.","Jesus, you are the bread of life.","Father, help me eat with self-control.","God, satisfy me.","Lord, help me notice what I really need.","Jesus, fill the empty place.","Father, thank you for this food.","God, help me cope another way.","Lord, my body is yours.","Jesus, help me be balanced."],
+a:["Pause and drink a glass of water.","Ask: am I hungry, or am I stressed?","Leave the kitchen for ten minutes.","Go for a walk.","Text a friend.","Pray before you eat.","Put the food away.","Sit at the table instead of in front of a screen.","Write down how you feel.","Do something with your hands."]},
+
+substances:{v:["Proverbs 20:1","Romans 6:14"],
+p:["Lord, I've been using this to escape. Help me escape to you instead. Amen.",
+"Father, break this hold on me. Amen.",
+"Jesus, you set me free. Help me live free. Amen.",
+"God, give me the courage to ask for help. Amen.",
+"Lord, help me stay away from people and places that pull me back. Amen.",
+"Father, fill me with your Spirit, not with this. Amen.",
+"Jesus, help me face what I've been running from. Amen."],
+t:["Tell a trusted adult. You don't have to do this alone.",
+"Remove access: throw it away, delete contacts.",
+"Avoid the people and places connected to using.",
+"Notice your triggers and plan around them.",
+"Find healthy ways to cope with stress.",
+"If it feels out of control, ask for help from a doctor or counselor.",
+"Each day sober is a win. Celebrate it."],
+q:["Lord, help me say no right now.","Jesus, set me free.","Father, give me strength.","God, I need you more than this.","Lord, help me ask for help.","Jesus, fill me with your Spirit.","Father, break this hold.","God, help me face what I'm running from.","Lord, keep me safe.","Jesus, I choose you."],
+a:["Get rid of it right now.","Leave the place you're in.","Call or text someone you trust.","Go where there are other people.","Drink some water and eat something.","Go for a walk.","Delete the contact you'd reach out to.","Pray out loud.","Tell a parent what's going on.","Wait it out for twenty minutes with God."]},
+
+money:{v:[],
+p:["Lord, I keep thinking the next thing will satisfy me. Teach me that only you do. Amen.",
+"Father, everything I have is yours. Help me use it well. Amen.",
+"Jesus, help me be generous like you. Amen.",
+"God, keep me from gambling and quick-money schemes. Amen.",
+"Lord, help me trust you to provide. Amen.",
+"Father, show me where my treasure is. Amen.",
+"Jesus, you're worth more than anything I could buy. Amen."],
+t:["Give something away this week.",
+"Wait 48 hours before buying something you don't need.",
+"Before you buy something, ask if you'd still want it in a month.",
+"Make a simple budget.",
+"Thank God for what you have.",
+"Avoid ads and shopping apps when you're bored.",
+"Tithe or give regularly, even a small amount."],
+q:["Lord, make me content.","Jesus, you're my treasure.","Father, help me be generous.","God, help me trust you to provide.","Lord, keep me from greed.","Jesus, help me wait.","Father, everything is yours.","God, help me say no to this bet.","Lord, thank you for what I have.","Jesus, help me give."],
+a:["Close the shopping or betting app.","Delete the app right now.","Wait 48 hours before buying.","Give something away.","Write down three things you're thankful for.","Talk to a parent about money.","Put your card away.","Unsubscribe from shopping emails.","Pray before you spend.","Text a friend to keep you accountable."]},
+
+company:{v:["Proverbs 22:24-25","Proverbs 18:24","John 15:13","Psalm 119:63"],
+p:["Lord, I've been around people who pull me away from you. Give me wisdom. Amen.",
+"Father, give me friends who love you. Amen.",
+"Jesus, help me be a good influence, not just avoid bad ones. Amen.",
+"God, give me courage to step away when I need to. Amen.",
+"Lord, help me be a true friend. Amen.",
+"Father, show me which friendships to invest in. Amen.",
+"Jesus, help me not be afraid to stand out. Amen."],
+t:["Invite a friend who's a good influence to something this week.",
+"Spend more time with friends who encourage your faith.",
+"Join a youth group or Bible study.",
+"Have an exit plan when things go wrong.",
+"Be honest with friends about your faith.",
+"It's okay to step away from a friendship that pulls you down.",
+"Be the friend you want to have."],
+q:["Lord, give me courage to walk away.","Jesus, give me good friends.","Father, help me be a good influence.","God, help me stand firm.","Lord, give me wisdom about my friends.","Jesus, help me be a true friend.","Father, help me not go along with it.","God, help me speak up.","Lord, show me where I belong.","Jesus, you're my closest friend."],
+a:["Leave the situation.","Text a parent to pick you up.","Say: I'm not doing that.","Go find a different friend.","Change the subject.","Put your phone away.","Pray silently for courage.","Call someone who encourages you.","Make an excuse and go home.","Plan to hang out with a better influence."]},
+
+general:{v:[],
+p:["Lord, I'm struggling with something I can't fully name. Help me. Amen.",
+"Father, I want to grow. Show me where to start. Amen.",
+"Jesus, I bring you my whole heart, mess and all. Amen.",
+"God, give me strength for today. Amen.",
+"Lord, help me be honest with you about everything. Amen.",
+"Father, change me from the inside. Amen.",
+"Jesus, walk with me through this. Amen."],
+t:["Write down what you're struggling with in one sentence.",
+"Pray about it specifically.",
+"Tell one trusted person.",
+"Look for one small change you can make.",
+"Read a Psalm.",
+"Be patient with yourself.",
+"Keep showing up. Growth takes time."],
+q:["Lord, help me right now.","Jesus, I need you.","Father, give me strength.","God, I'm trusting you.","Lord, walk with me.","Jesus, be near.","Father, I'm yours.","God, help me take the next step.","Lord, change my heart.","Jesus, I choose you."],
+a:["Take five slow breaths.","Put your phone down.","Step outside.","Pray out loud.","Text someone you trust.","Read a Psalm.","Drink a glass of water.","Write down how you feel.","Put on a worship song.","Go be around people."]}
+};
+
+/* Advice shown after a reflection, by struggle type and how the day went: r = rough (1-4), m = mixed (5-7), s = strong (8-10) */
+const ADVICE = {
+purity:{
+r:["A hard day doesn't cancel God's grace. Confess it, receive his forgiveness, and don't let shame keep you hiding.",
+"Look back at what led up to it: time of day, mood, place, device. Pick one of those to change tomorrow.",
+"Tonight, put your phone outside your room. Most battles are won before they start.",
+"Tell one trusted person about today. Secrets make this stronger, and honesty makes it weaker.",
+"Don't punish yourself. Jesus already paid for this. Your job now is to get up and walk with him again.",
+"If you have blocks or filters, check that they're working. If you don't, set them up this week.",
+"Notice if loneliness, boredom, or stress was underneath this. Bring that need to God directly.",
+"Read 1 John 1:9 before bed and believe it applies to you tonight.",
+"Plan tomorrow's danger zone, like late at night or alone in your room, and decide now what you'll do instead.",
+"You're not starting from zero. Every honest reflection is part of getting free."],
+m:["You fought today, even if it wasn't perfect. Notice what helped you hold the line.",
+"Think about the moment it got hardest today. What would have made it easier? Set that up for tomorrow.",
+"Guard your evenings. They're often where mixed days tip one way or the other.",
+"Keep your eyes moving. When something catches your attention, look away and say a one-line prayer.",
+"Fill your mind with good things tomorrow, like worship, Scripture, and good conversations. What you feed grows.",
+"A mixed day is still progress if you're honest about it. Keep going.",
+"Ask God to change your desires, not just your behavior.",
+"Check your device habits. Is there one app or time of day that keeps pulling you in?",
+"Text a friend tomorrow and ask them to pray for you in this area.",
+"Thank God for the times you said no today. Those count."],
+s:["Strong day. Thank God for it, because his strength showed up in you.",
+"Notice what worked today and do it again tomorrow.",
+"Don't drop your guard because today went well. Keep the same boundaries in place.",
+"Freedom grows one day at a time. Today was one of those days.",
+"Pray for someone else who's fighting this same battle.",
+"Remember how this feels. On a hard day, you'll need to remember that you can do it.",
+"Keep your phone out of your room tonight, even though you feel strong.",
+"Write down what helped today so you can look back on it.",
+"This is what walking in the Spirit looks like. Keep going.",
+"Be humble about it. Pride is often what comes right before a fall."]},
+
+anger:{
+r:["If you hurt someone today, apologize soon, without excuses.",
+"Think about the moment you snapped. What happened right before? That's your warning sign.",
+"Anger usually sits on top of something else, like hurt, embarrassment, or fear. Name what was underneath today.",
+"Pray for the person you were angry at, even one sentence.",
+"Tomorrow, practice the pause: breathe and wait before you respond.",
+"Don't go to sleep replaying the fight. Hand it to God and let it rest.",
+"Being tired and stressed makes anger worse. Get good sleep tonight.",
+"Read James 1:19-20 and ask God to make you slow to anger.",
+"Forgive yourself too. God already has.",
+"Ask someone close to you to point it out when you're getting heated."],
+m:["You held it together some of the time. Notice when you managed to stay calm.",
+"When you felt the heat rising today, what helped? Do that again.",
+"Plan ahead for the person or situation that tests you most.",
+"Give soft answers tomorrow, even when you feel sharp.",
+"Practice listening all the way to the end before you respond.",
+"If something is still bugging you, talk it out calmly instead of letting it build.",
+"Ask God to show you where pride is mixed into your anger.",
+"Notice your body's warning signs, like a tight jaw or hot face, and step away early.",
+"Thank God for the moments you chose peace today.",
+"Read Proverbs 15:1 tomorrow morning."],
+s:["You stayed calm today. That's the Spirit's fruit growing in you.",
+"Thank God for the patience he gave you.",
+"Notice what helped you stay calm, like sleep, prayer, or timing.",
+"Keep making peace. People notice it.",
+"Remember today the next time you're tempted to blow up.",
+"Pray for someone who struggles with anger too.",
+"Stay humble. Self-control is a gift, not something you earned.",
+"Keep the habits that helped you today.",
+"If there's someone you still need to make peace with, today's calm is a good time to do it.",
+"This is real growth. Keep going."]},
+
+speech:{
+r:["If your words hurt someone today, go back and apologize.",
+"Notice who you were with when your words got worse. Plan around that.",
+"Before you speak tomorrow, ask: is it true, is it kind, is it necessary?",
+"Confess what you said to God, and accept his forgiveness.",
+"Tomorrow, say one encouraging thing to the person you hurt.",
+"If you gossiped, don't spread it any further. Let it stop with you.",
+"Pray Psalm 141:3 tomorrow morning: set a guard over my mouth.",
+"Think about what you were feeling when the words came out. Bring that to God.",
+"Stay out of group chats that pull you into this.",
+"Grace covers today. Tomorrow is a new chance."],
+m:["You caught yourself some of the time. That's growth.",
+"Notice the situations where your words slip, and plan for them.",
+"Tomorrow, replace one complaint with one thank-you.",
+"Change the subject when gossip starts. You don't have to join in.",
+"Encourage someone tomorrow on purpose.",
+"Pause before you reply to messages.",
+"Ask a friend to call you out kindly when you slip.",
+"Pray that your words would please God tomorrow.",
+"Remember how much words matter. Proverbs says life and death are in the tongue.",
+"Thank God for the kind words you did say today."],
+s:["Your words were good today. Thank God for that.",
+"Keep building people up. It matters more than you know.",
+"Notice what helped you speak well today.",
+"Encourage someone again tomorrow.",
+"Stay alert. Speech can slip when you're tired or with certain people.",
+"Pray for the people you talked with today.",
+"Your words reflect Jesus. Keep it up.",
+"Write down one encouraging thing you said today.",
+"Stay humble about it, and keep growing.",
+"Today shows that change is possible. Keep going."]},
+
+
+};
+
+/* Advice, part 2 */
+Object.assign(ADVICE, {
+pride:{
+r:["Ask God to show you where you made today about yourself. Then sit with what he shows you.",
+"If you were harsh or dismissive with someone, go back and apologize, without explaining why you were right.",
+"Tomorrow, serve someone in a way no one will notice. Pride shrinks when nobody's watching.",
+"Admit you were wrong about one thing, even something small. It gets easier every time.",
+"Think about who you looked down on today. Pray for them by name before you sleep.",
+"Everything you're proud of is a gift from God. Thank him for it instead of taking credit.",
+"Pride often covers insecurity. Ask God what you were trying to prove today.",
+"Read Philippians 2:5-8 and look at how low Jesus was willing to go.",
+"Ask one person you trust for honest feedback this week, and just listen.",
+"God gives grace to the humble, and confessing pride is humility. You're already on the way back."],
+m:["You had humble moments today. Think about what made them possible.",
+"Tomorrow, listen all the way to the end before you share your opinion.",
+"Let someone else get the credit tomorrow, and don't mention your part.",
+"When you feel the urge to correct someone, ask a question instead.",
+"Notice when you compare yourself to others. That's often where pride starts.",
+"Thank someone specifically for something they did. It keeps your eyes off yourself.",
+"Be open to correction this week. Say thanks instead of defending yourself.",
+"Pray for the person who irritates you most. It's hard to look down on someone you pray for.",
+"Do a small task tomorrow that feels beneath you, and do it well.",
+"Humility isn't thinking less of yourself. It's thinking of yourself less."],
+s:["You stayed humble today. That's the character of Jesus growing in you.",
+"Thank God for the grace to put others first. It came from him.",
+"Keep serving quietly. The best service doesn't need an audience.",
+"Notice what helped you stay humble, like prayer, perspective, or the people around you.",
+"Be careful not to get proud of being humble. Just thank God and keep going.",
+"Encourage someone tomorrow who usually goes unnoticed.",
+"Keep listening well. People feel loved when they're heard.",
+"Pray for someone who's in a season of struggle.",
+"Stay teachable. Ask someone this week what you could do better.",
+"This is what following Jesus looks like. Keep walking."]},
+
+envy:{
+r:["Before bed, write down three specific things God has given you. Be detailed.",
+"Think about what set off comparison today, like an app, a person, or a moment. Limit it tomorrow.",
+"Pray for the person you envied by name, and ask God to bless them.",
+"You saw their best moments, not their whole life. Don't measure your inside against their outside.",
+"Ask God what you're really longing for underneath the envy. Bring that need to him.",
+"Tomorrow, congratulate someone sincerely, even if it stings a little.",
+"Read Psalm 73. Asaph envied others until he went into God's presence and saw clearly.",
+"Give something away this week. Generosity loosens envy's grip.",
+"Your worth was settled at the cross. It isn't measured against anyone else's.",
+"Confess it honestly, receive grace, and start fresh tomorrow."],
+m:["You caught yourself comparing some of the time. Noticing is how change starts.",
+"Tomorrow morning, thank God for one specific gift before you check your phone.",
+"Mute one account that keeps stirring up comparison.",
+"Celebrate someone else's win tomorrow out loud.",
+"Run your own race. God didn't give you their lane.",
+"Pray Philippians 4:11: help me learn to be content.",
+"Notice one thing you have that you used to pray for.",
+"When envy shows up, turn it into a prayer for that person.",
+"Ask God to help you rejoice when others rejoice, and mean it.",
+"Gratitude is a muscle. Keep using it."],
+s:["You were content today. That's real freedom.",
+"Thank God for what he's given you, specifically and out loud.",
+"Keep celebrating other people. It's one of the best ways to fight envy.",
+"Notice what helped you stay content today, and protect it.",
+"Write down something you're grateful for so you can remember this feeling.",
+"Pray for someone who's stuck in comparison.",
+"Enjoy what you have without looking over your shoulder.",
+"Keep your eyes on the path God has for you.",
+"Contentment in Christ is something the world can't sell you. Enjoy it.",
+"Days like today show the change is real. Keep going."]},
+
+approval:{
+r:["Notice the moments today when you changed yourself to fit in. Ask God what you were afraid of.",
+"You're already approved in Christ. Nothing anyone said today changes that.",
+"Tomorrow, practice one kind, honest no.",
+"Ask yourself who you were trying to impress today, and whether they deserve that much of you.",
+"Spend time this week with people who accept you as you are.",
+"Read Galatians 1:10 and ask whose approval you're living for.",
+"Stay off posting tomorrow. See how it feels not to wait for reactions.",
+"Do one good thing in secret, where only God sees.",
+"Ask God to free you from needing everyone to like you.",
+"Grace covers today. Your Father's opinion of you hasn't moved."],
+m:["You were yourself some of the time today. Notice when that happened.",
+"Be honest in one conversation tomorrow where you'd normally go along.",
+"Say no to one thing you don't actually want to do.",
+"Before you act, ask: am I doing this for God or for them?",
+"Do one thing tomorrow just for God, with no audience.",
+"Check likes and views less often tomorrow.",
+"Pray for courage to be who God made you to be.",
+"Spend time with friends who are real with you.",
+"When you feel pressure to perform, name it and hand it to God.",
+"Freedom from people-pleasing grows slowly. Keep at it."],
+s:["You lived for God's approval today. That's freedom.",
+"Thank God that you're accepted in his Son, no matter what anyone thinks.",
+"Keep being yourself. The people who matter will love the real you.",
+"Notice what helped you stay grounded today.",
+"Encourage a friend to be real tomorrow.",
+"Stay rooted in God's love. It's what makes you secure.",
+"Keep doing good where only God sees.",
+"Pray for someone who's stuck trying to please everyone.",
+"Remember how this feels next time the pressure comes.",
+"This is what living for an audience of one looks like."]},
+
+honor:{
+r:["If you were disrespectful today, apologize to your parent or teacher. Do it soon.",
+"Think about what set you off. Plan a calmer response for next time.",
+"Tomorrow, do one helpful thing at home without being asked.",
+"Pray for your parents by name tonight.",
+"Remember they're carrying stress you might not see.",
+"When you disagree tomorrow, lower your voice and listen first.",
+"Read Ephesians 6:1-3. God attached a promise to honoring your parents.",
+"Ask God for a humble heart, especially when you think you're right.",
+"Thank your parents for one specific thing this week.",
+"Grace covers today. Respect can be rebuilt one conversation at a time."],
+m:["You showed respect some of the time today. Notice what helped.",
+"Tomorrow, listen fully before you respond.",
+"Do a chore with a good attitude, not just a finished one.",
+"Thank a teacher or coach for something specific.",
+"You can disagree and still be respectful. Practice it tomorrow.",
+"Ask your parents how their day was, and actually listen.",
+"Pray for the people in authority over you.",
+"Pay attention to your tone. It often says more than your words.",
+"Obedience with a good attitude honors God, not just your parents.",
+"Respect grows trust, and trust grows freedom. Keep building it."],
+s:["You honored the people over you today. That pleases God.",
+"Thank God for your parents and leaders, even with their flaws.",
+"Keep your respectful tone, especially when you're tired.",
+"Notice what helped you stay respectful today.",
+"Encourage your parents tomorrow. They probably need it.",
+"Keep helping without being asked. People notice.",
+"Pray for your family tonight.",
+"Stay humble. Respect is a gift you give, not a score you keep.",
+"Days like today build trust that pays off later.",
+"This is Ephesians 6 in real life. Keep going."]},
+
+anxiety:{
+r:["Write down what you're anxious about tonight, then pray over each worry one by one.",
+"Put your phone away early tonight. Scrolling feeds anxiety right before sleep.",
+"Breathe slowly before bed, with your exhale longer than your inhale.",
+"Tell someone you trust how you've been feeling. Anxiety gets lighter when it's shared.",
+"Read Philippians 4:6-7 before bed and pray it in your own words.",
+"Focus on tomorrow only, not the whole week or the whole year.",
+"Notice what fed your anxiety today, like news, apps, or a certain thought. Limit it tomorrow.",
+"God is already in tomorrow. You don't have to go there ahead of him.",
+"Anxiety isn't a sin or a lack of faith. Be gentle with yourself.",
+"If anxiety is heavy most days, ask a parent about seeing a counselor. That's wisdom, not weakness."],
+m:["You had calm moments today. Notice what was happening when you felt them.",
+"Keep praying through your worries as they come, one sentence at a time.",
+"Cut back on whatever fed your anxiety today.",
+"Get good sleep tonight. Tired minds worry more.",
+"When worry rises tomorrow, stop and breathe slowly three times.",
+"Sort your worries into what you can control and what you can't. Give God the second list.",
+"Talk to someone you trust this week.",
+"Read Matthew 6:25-34 tomorrow morning.",
+"Start tomorrow with a short prayer before you look at your phone.",
+"Peace grows with practice. Keep practicing."],
+s:["You felt more peace today. Thank God for it.",
+"Notice what helped, like sleep, prayer, or fewer screens, and keep it up.",
+"Keep the habits that are working.",
+"Pray for someone you know who's anxious.",
+"Remember this peace on harder days. It's real, and it can come back.",
+"Rest well tonight to protect tomorrow's peace.",
+"Keep bringing small worries to God before they grow.",
+"Encourage someone who's stressed.",
+"God's peace guards your heart. Enjoy it today.",
+"This is progress. Keep going."]},
+
+doubt:{
+r:["Write down your biggest question tonight and plan to ask a pastor or mentor about it.",
+"Pray honestly, even if it's messy. God can handle your questions.",
+"Start reading the Gospel of John this week. Look at who Jesus is.",
+"Remember one specific time God was faithful to you.",
+"Stay connected to church, even while you wrestle.",
+"Doubt isn't the end of faith. Unbelief walks away, and doubt keeps asking.",
+"Read Mark 9:24 and pray it: I believe, help my unbelief.",
+"Talk to a Christian friend you trust about where you are.",
+"Ask God plainly to show himself to you this week.",
+"Keep seeking. God promises to be found by those who search with their whole heart."],
+m:["You held onto faith today, even with questions. That matters.",
+"Keep reading Scripture, even a little each day.",
+"Write down one thing you're sure you believe about God.",
+"Ask your questions out loud to someone who can help.",
+"Pray honestly tomorrow, without polishing your words.",
+"Stay in community. Doubt is harder alone.",
+"Listen to worship that tells the truth about God.",
+"Read a Psalm of lament, like Psalm 13 or 42.",
+"Make a list of times God came through.",
+"Faith can grow through questions. Keep asking."],
+s:["Your faith felt strong today. Thank God for it.",
+"Notice what helped you believe, and come back to it.",
+"Keep feeding your faith with Scripture and prayer.",
+"Encourage someone who's working through doubts.",
+"Write down what you believe today so you can read it on a harder day.",
+"Keep praying, even when it feels easy.",
+"Stay in the Word.",
+"Remember this when questions come back.",
+"Share what God's showing you with a friend.",
+"Strong days are gifts. Keep walking."]},
+
+devotion:{
+r:["Pick a specific time tomorrow to read your Bible, even for five minutes.",
+"Pray before you check your phone tomorrow morning.",
+"Ask God to give you a hunger for him. That's a prayer he loves to answer.",
+"Notice what crowded God out today, and make a little room tomorrow.",
+"Start small. One chapter, or even one verse, is enough.",
+"Find a friend to read the Bible with this week.",
+"Plan to go to church or youth group this week.",
+"Read Psalm 63 and pray it back to God.",
+"God hasn't moved away from you. Turning back is one step.",
+"Grace covers today. Tomorrow is a fresh start with God."],
+m:["You made some time for God today. Build on it.",
+"Keep the same time tomorrow. Consistency matters more than length.",
+"Pray for a few minutes before bed tonight.",
+"Read one chapter tomorrow and write down one thing you notice.",
+"Listen to worship on the way to school or practice.",
+"Talk to God during the day, not just at set times.",
+"Write down one thing you learned about God this week.",
+"Share what you're reading with a friend.",
+"Ask God to make your time with him feel real, not routine.",
+"Small, steady habits are how faith grows."],
+s:["You put God first today. That's beautiful.",
+"Keep your rhythm going tomorrow.",
+"Notice what helped you make time today.",
+"Share something God taught you with someone.",
+"Thank him for meeting you today.",
+"Invite a friend to read with you.",
+"Stay consistent, even when it feels dry.",
+"Remember today on the dry days.",
+"Keep praying throughout the day.",
+"This is what loving God looks like. Keep going."]},
+
+selfworth:{
+r:["Write down three things God says about you and read them before you sleep.",
+"Tell someone you trust how you've been feeling about yourself.",
+"When the negative voice shows up, answer it with what God says.",
+"Limit apps that leave you feeling worse about yourself.",
+"Read Psalm 139:13-16 and let it speak to you.",
+"Be gentle with yourself tonight. You'd be gentle with a friend.",
+"Do something you're good at tomorrow, and thank God for the gift.",
+"Your worth was settled at the cross. Today's feelings don't change it.",
+"Talk to yourself the way you'd talk to someone you love.",
+"If you ever feel like you'd be better off gone, call or text 988 or tell an adult right away."],
+m:["You had moments of seeing yourself rightly today. Notice when.",
+"Keep replacing lies with truth, one thought at a time.",
+"Spend time with people who love you this week.",
+"Read one passage about who you are in Christ.",
+"Notice when comparison starts, and stop it early.",
+"Be kind to yourself tomorrow in one specific way.",
+"Serve someone tomorrow. It reminds you that you have something to give.",
+"Pray for a right view of yourself, not too high and not too low.",
+"Celebrate one thing you did well today.",
+"Healing how you see yourself takes time. Keep going."],
+s:["You saw yourself the way God sees you today. That's real.",
+"Thank God for his love. It's the reason you have worth.",
+"Keep speaking truth to yourself.",
+"Notice what helped you today.",
+"Encourage someone else who's struggling with this.",
+"Remember today when the hard days come.",
+"Keep good people close.",
+"Write down what's true about you.",
+"Stay rooted in God's love.",
+"This is what freedom feels like. Keep going."]},
+
+honesty:{
+r:["If you lied today, go back and correct it. The sooner, the easier.",
+"Ask yourself what you were afraid of if you told the truth.",
+"Confess it to God and receive his forgiveness.",
+"Make it right where you can: correct, return, or repair.",
+"Tomorrow, tell the truth the first time, even when it's uncomfortable.",
+"Read Proverbs 12:22. God delights in people who are truthful.",
+"Ask a friend to hold you accountable this week.",
+"Notice when you exaggerate. It's a small lie that grows.",
+"Grace covers today. Integrity can be rebuilt.",
+"Integrity is built one honest choice at a time."],
+m:["You told the truth some of the time today. Notice when.",
+"Correct small lies quickly, before they grow.",
+"Stop exaggerating, even in stories.",
+"Be honest in one hard conversation tomorrow.",
+"Pray for courage before you talk.",
+"Notice what fears make you want to lie.",
+"Return anything that isn't yours.",
+"Be the same person in private and public.",
+"Ask God for integrity.",
+"Honesty builds trust over time. Keep at it."],
+s:["You were honest today. That honors God.",
+"Thank him for the courage to tell the truth.",
+"Keep telling the truth, even in small things.",
+"Notice what helped you be honest today.",
+"Encourage a friend to be honest.",
+"Stay consistent.",
+"Remember today when honesty gets hard.",
+"Pray for integrity.",
+"Trust is being built with every honest word.",
+"This is what a person of integrity looks like. Keep going."]},
+
+discipline:{
+r:["Pick one small task for tomorrow and do it first.",
+"Put your phone in another room while you work tomorrow.",
+"Make a short list tonight, three things at most.",
+"Set a consistent wake-up time.",
+"Ask someone to check in on you tomorrow.",
+"Start with just five minutes. Starting is the hardest part.",
+"Notice what distracted you most today.",
+"Read Proverbs 6:6-8 about the ant.",
+"Grace covers today. Discipline is built, not born.",
+"Small steps add up to big change."],
+m:["You got some things done today. Build on that tomorrow.",
+"Do the hardest task first tomorrow, while you have energy.",
+"Remove one distraction before you start.",
+"Keep your list short and doable.",
+"Celebrate small wins. They keep you going.",
+"Take breaks on purpose, not by drifting.",
+"Pray before you start your work.",
+"Ask for help if you're stuck instead of avoiding it.",
+"Keep your commitments, even small ones.",
+"Faithfulness in small things leads to more."],
+s:["You were disciplined today. Thank God for the strength.",
+"Notice what worked, and repeat it tomorrow.",
+"Keep your rhythm going.",
+"Rest well tonight. Rest is part of discipline.",
+"Encourage someone who's struggling to get going.",
+"Stay humble. Self-control is a fruit of the Spirit.",
+"Plan tomorrow tonight while you have momentum.",
+"Remember today on the hard days.",
+"Work as for the Lord, not for people.",
+"This is real progress. Keep going."]},
+
+screens:{
+r:["Put your phone outside your room tonight.",
+"Notice which app pulled you in most today. That's your target.",
+"Set a screen time limit for that app tomorrow.",
+"Delete one app for a week and see how it feels.",
+"Pray before you pick up your phone tomorrow.",
+"Turn off notifications that pull you back in.",
+"Plan one screen-free hour tomorrow.",
+"Read Psalm 119:37: turn my eyes from worthless things.",
+"Grace covers today. You can take your time back.",
+"Every hour you take back is a win."],
+m:["You had some time away from screens today. Notice it.",
+"Keep your phone out of reach while you work.",
+"Try grayscale mode tomorrow. It makes apps less appealing.",
+"Plan time with people instead of screens.",
+"Pray before opening social media.",
+"Pick one app to limit.",
+"Go outside tomorrow without your phone.",
+"Read before bed instead of scrolling.",
+"Notice how you feel after scrolling. Usually not better.",
+"Every limit you keep makes the next one easier."],
+s:["You used screens well today. That's freedom.",
+"Notice what helped, and keep it up.",
+"Keep your limits in place.",
+"Spend time with people.",
+"Keep your phone out of your room tonight.",
+"Encourage a friend to take a break too.",
+"Remember how good this feels.",
+"Stay present with the people around you.",
+"Thank God for the time back.",
+"This is how freedom grows. Keep going."]},
+
+food:{
+r:["Be gentle with yourself tonight. Tomorrow is new.",
+"Think about what you were feeling before you ate. Bring that feeling to God.",
+"Plan another way to cope tomorrow, like a walk, a friend, or prayer.",
+"Pray before your meals tomorrow.",
+"Eat at the table instead of in front of a screen.",
+"Talk to someone you trust about how you're doing.",
+"Read John 6:35. Jesus is the bread of life.",
+"If eating feels out of control, talk to a parent or doctor.",
+"Grace covers today.",
+"You are not defined by today."],
+m:["You had some balance today. Notice what helped.",
+"Pause before eating tomorrow and ask how you're really feeling.",
+"Notice emotional triggers like stress or boredom.",
+"Pray before meals.",
+"Eat with others when you can.",
+"Find other ways to cope with hard feelings.",
+"Thank God for your food.",
+"Be patient with yourself.",
+"Talk to someone you trust.",
+"Balance grows slowly. Keep going."],
+s:["You had balance today. Thank God for it.",
+"Notice what helped you today.",
+"Keep praying before meals.",
+"Enjoy food as a gift from God.",
+"Stay balanced tomorrow.",
+"Encourage someone who's struggling.",
+"Remember today on harder days.",
+"Keep your good habits.",
+"Thank God for your body and how he made it.",
+"This is real progress. Keep going."]},
+
+substances:{
+r:["Tell a trusted adult what happened. You don't have to do this alone.",
+"Get rid of access tonight, whatever that means for you.",
+"Avoid the people and places connected to using.",
+"Notice your triggers so you can plan around them.",
+"Pray for strength before tomorrow starts.",
+"Read Romans 6:14. Sin doesn't have to be your master.",
+"If it feels out of control, ask for help from a doctor or counselor.",
+"Grace covers today.",
+"Tomorrow is a new start.",
+"Every step toward freedom counts, even small ones."],
+m:["You resisted some of the time today. That matters.",
+"Keep avoiding the places and people that trigger you.",
+"Stay close to people who support you.",
+"Pray when cravings come.",
+"Find healthy ways to cope with stress.",
+"Talk to someone you trust this week.",
+"Keep access out of reach.",
+"Celebrate each sober hour.",
+"Ask for help if you need it.",
+"Freedom is built one day at a time."],
+s:["You stayed free today. That's huge.",
+"Thank God for the strength.",
+"Notice what helped, and lean on it again tomorrow.",
+"Keep your boundaries in place.",
+"Stay close to good people.",
+"Encourage someone else who's fighting.",
+"Remember today when cravings come back.",
+"Celebrate this win.",
+"Keep praying.",
+"One day at a time. Keep going."]},
+
+money:{
+r:["Delete betting or shopping apps tonight.",
+"Notice what triggered the urge to spend or bet.",
+"Wait 48 hours before buying anything you don't need.",
+"Give something away tomorrow.",
+"Talk to a parent about money this week.",
+"Pray for contentment.",
+"Read Hebrews 13:5. God will never leave you.",
+"Make a simple budget this week.",
+"Grace covers today.",
+"Contentment can grow."],
+m:["You had some contentment today. Notice it.",
+"Wait before buying.",
+"Give generously, even something small.",
+"Thank God for what you have.",
+"Avoid shopping when you're bored.",
+"Pray before spending.",
+"Keep track of your money this week.",
+"Unsubscribe from shopping emails.",
+"Trust God to provide what you need.",
+"Generosity grows contentment. Keep giving."],
+s:["You were content today. That's freedom.",
+"Thank God for what he's given you.",
+"Keep giving generously.",
+"Notice what helped you today.",
+"Stay grateful.",
+"Encourage someone to be content.",
+"Remember today when you're tempted.",
+"Keep your limits.",
+"Trust God with your needs.",
+"This is real freedom. Keep going."]},
+
+company:{
+r:["Notice who pulled you down today, and plan how to handle it next time.",
+"Have an exit plan ready for next time.",
+"Spend time this week with friends who encourage you.",
+"Pray for courage to stand firm.",
+"Text a parent if you need to leave somewhere.",
+"Read Proverbs 13:20. You become like the people you walk with.",
+"Join a youth group or Bible study.",
+"Be honest with friends about your faith.",
+"Grace covers today.",
+"You can choose your influences."],
+m:["You stood firm some of the time today. Notice when.",
+"Spend time with good influences this week.",
+"Have an exit plan ready.",
+"Pray for your friends by name.",
+"Be a good influence yourself.",
+"Speak up kindly when something's wrong.",
+"Notice the pressure before it builds.",
+"Stay close to God.",
+"Find community that builds you up.",
+"Courage grows each time you use it."],
+s:["You stood firm today. That's courage.",
+"Thank God for the strength.",
+"Keep good friends close.",
+"Be a good influence on others.",
+"Encourage someone tomorrow.",
+"Notice what helped you stand firm.",
+"Pray for your friends.",
+"Remember today when the pressure comes back.",
+"Stay strong.",
+"Your example matters more than you know. Keep going."]},
+
+general:{
+r:["Bring today to God honestly. He can handle it.",
+"Notice one thing that made today hard, and name it to God.",
+"Pray specifically tomorrow about what you're facing.",
+"Tell someone you trust how today went.",
+"Be gentle with yourself tonight.",
+"Read a Psalm before bed.",
+"Pick one small change for tomorrow.",
+"Rest well tonight.",
+"Grace covers today.",
+"Tomorrow is a new day with new mercy."],
+m:["Today was mixed. Notice what went well.",
+"Keep praying through what's hard.",
+"Make one small change tomorrow.",
+"Stay close to God.",
+"Talk to someone you trust.",
+"Rest well tonight.",
+"Read Scripture tomorrow.",
+"Be patient with yourself.",
+"Thank God for the good parts of today.",
+"Growth takes time. Keep going."],
+s:["Good day. Thank God for it.",
+"Notice what helped today.",
+"Keep those habits going.",
+"Encourage someone tomorrow.",
+"Remember today on harder days.",
+"Stay close to God.",
+"Rest well tonight.",
+"Pray for someone who's struggling.",
+"Stay humble.",
+"Keep going."]}
+});
+
+/* "I need help right now" lines, wins, Wednesday prompts, plus the merge of all extra content */
+const RESCUE = {
+name:["This is a temptation, not an order. You don't have to obey it.",
+"You're being pulled. That doesn't mean you have to go.",
+"Feeling the urge isn't sin. What you do next is the choice.",
+"Name it plainly: this is temptation, and God has given you a way out.",
+"This feeling is loud, but it isn't in charge. You are, with God.",
+"You've felt this before, and it passed. It will pass again.",
+"Stop for a second. You're not trapped. There's a door, and God is holding it open.",
+"Temptation lies about how good it'll feel and how bad it'll be to say no. Don't believe it.",
+"Jesus was tempted too, and he's with you in this exact moment.",
+"Right now, you get to choose. Choose the next right thing."],
+wait:["Urges rise, peak, and fade, usually within minutes. Stay here with God until this one does.",
+"Breathe with the circle. In as it grows, out as it shrinks. Let the urge pass while you wait.",
+"You don't have to win the whole war tonight. Just these few minutes.",
+"Every minute you wait, the pull gets weaker. Keep breathing.",
+"Pray slowly as you breathe: Jesus, I need you. Jesus, I'm yours.",
+"This is a fight you can win by simply not moving toward it. Stay right here.",
+"Let the feeling be there without acting on it. It will lose strength.",
+"God is not disappointed that you're struggling. He's proud that you're fighting.",
+"Picture yourself an hour from now, glad you waited. Stay with that.",
+"You're doing it. Keep breathing, keep praying, keep waiting."],
+through:["You did it. That was God's strength in you, and it's real.",
+"You got through it. Thank him, and remember this moment next time.",
+"That's a win. Every no makes the next one easier.",
+"You chose God over that moment. That matters to him and to you.",
+"Well fought. Freedom is built from moments exactly like this one.",
+"You just proved the urge doesn't control you.",
+"That took courage. Rest in the fact that you didn't go back.",
+"God gave you the way out, and you took it. Thank him for that.",
+"This is what walking in the Spirit looks like. Keep going.",
+"One more step toward freedom. Well done."],
+still:["That's okay. You're still fighting, and you're not alone. Try the steps again or talk to someone now.",
+"It's still strong, and that's real. Don't stay alone with it. Go be around people or call someone.",
+"You haven't failed by still feeling it. Keep resisting, and get help if you need it.",
+"Sometimes it takes more than one round. Breathe, pray, and move somewhere else.",
+"The urge being strong doesn't mean you're weak. Keep going, one minute at a time.",
+"Text or call someone you trust right now. You don't have to tell them everything.",
+"Change your location now. Go where there are other people.",
+"Pray out loud, even just: Jesus, help. He hears you.",
+"You're still standing. Keep standing.",
+"Get some fresh air and try again. You can do this with God."],
+grace:["It's not the end. His mercies are new every morning, including tomorrow.",
+"You fell, but you're not thrown away. God is already reaching for you.",
+"Shame wants you to hide. Grace invites you to come back. Come back.",
+"Jesus paid for this one too. You don't have to pay for it again.",
+"One fall doesn't erase your progress. Get up and keep walking.",
+"God isn't surprised by this, and he isn't done with you.",
+"The prodigal son's father ran to him. Your Father is running to you right now.",
+"You're still his child. Nothing you did today changes that.",
+"Confess it, receive forgiveness, and start again. That's the whole gospel in one night.",
+"There is no condemnation for those in Christ Jesus, even tonight."],
+confess:["Lord, I gave in. I'm sorry. Thank you for forgiving me and making me clean. Help me get back up. Amen.",
+"Father, I did what I didn't want to do. I confess it to you. Wash me, and give me strength for tomorrow. Amen.",
+"Jesus, I failed again. Thank you that your grace is bigger than this. Help me walk with you tomorrow. Amen.",
+"God, I won't hide this from you. Forgive me, and change my heart. Amen.",
+"Lord, I'm ashamed, but I'm coming to you anyway. Forgive me and restore me. Amen.",
+"Father, create a clean heart in me. I want to be free. Amen.",
+"Jesus, you paid for this. I receive your forgiveness. Help me not pick up the shame again. Amen.",
+"God, I'm weak, and you are strong. Forgive me and fight for me. Amen.",
+"Lord, show me what led here, and help me change it. Thank you for your mercy. Amen.",
+"Father, I'm turning back to you right now. Thank you for welcoming me home. Amen."],
+streak:["Your streak is safe. An honest reflection tonight still counts, even a low rating.",
+"Don't skip tonight's reflection. A truthful 2 out of 10 still keeps your streak going.",
+"Reflecting honestly tonight is a win in itself, and it keeps your streak alive.",
+"Your streak counts honesty, not perfection. Reflect tonight like always.",
+"Tonight's reflection still counts. Be honest. That's the point.",
+"Don't let one moment break your rhythm. Reflect tonight, honestly.",
+"A low rating tonight is better than no rating. Keep your streak going.",
+"Your streak is about showing up. Show up tonight.",
+"The app doesn't need you to be perfect. It needs you to be honest.",
+"Rate today honestly tonight. That's how you keep going."],
+tell:["Consider telling one trusted person what happened. Shame grows in secret.",
+"A friend, parent, or mentor who knows can pray for you. You don't have to do this alone.",
+"Think of one person who'd want to help. Reach out when you're ready.",
+"James 5:16 says confess to one another and pray for one another so you may be healed.",
+"Telling someone is hard, but it's one of the strongest things you can do.",
+"You don't have to share every detail. Just: I'm struggling, can you pray for me?",
+"Accountability isn't punishment. It's support.",
+"Who would you want to know if they were in your place? Be that honest with someone.",
+"Healing often starts when someone else knows.",
+"Pray about who to tell, and then take the step."],
+rough:["Rough stretches happen to everyone who's fighting. You're still here, still honest. That counts.",
+"A hard week doesn't undo what God has done in you.",
+"Progress isn't a straight line. Dips are part of it.",
+"You're not back at the start. You're in the middle of a fight.",
+"God is patient with you. Be patient with yourself.",
+"Even when it's rough, you keep reflecting. That faithfulness matters.",
+"This season will pass. Keep showing up.",
+"Look how many days you've shown up. That's not nothing.",
+"Hard stretches often come right before growth.",
+"You're still in the race. Keep running."],
+goal:["For tomorrow: pick one small boundary and keep it.",
+"For tomorrow: pray before you check your phone in the morning.",
+"For tomorrow: tell one person you trust how you're doing.",
+"For tomorrow: read one Psalm.",
+"For tomorrow: go to bed thirty minutes earlier.",
+"For tomorrow: avoid one trigger you know about.",
+"For tomorrow: write down one thing you're thankful for.",
+"For tomorrow: take a walk and talk to God.",
+"For tomorrow: say a one-line prayer when it gets hard.",
+"For tomorrow: just reflect honestly at the end of the day."],
+ground:["Breathe with the circle. In slowly, out even slower.",
+"Look around and name five things you can see.",
+"Feel your feet on the floor. You're here, and God is with you.",
+"Unclench your jaw and drop your shoulders.",
+"Name four things you can hear right now.",
+"Put a hand on your chest and feel it rise and fall.",
+"You don't have to fix everything. Just breathe for a minute.",
+"Say slowly: The Lord is my shepherd. I lack nothing.",
+"Notice one thing that's okay right now, even something small.",
+"This moment will pass. Breathe through it with God."],
+calm:["Lord, I'm overwhelmed. Hold me. I can't carry this alone. Amen.",
+"Jesus, be my peace right now. Calm the storm in me. Amen.",
+"Father, I don't know what to do. Be with me. Amen.",
+"God, I need you more than ever. Stay close. Amen.",
+"Lord, I'm giving you everything I'm carrying. Take it. Amen.",
+"Jesus, you said come to me, all who are weary. I'm coming. Amen.",
+"Father, quiet my mind and steady my heart. Amen.",
+"God, you are my refuge and strength, a very present help. Be present now. Amen.",
+"Lord, I'm not okay, and I'm telling you honestly. Help me. Amen.",
+"Jesus, hold onto me tonight. Amen."],
+wins:["You got through {n} urge{s} this week.",
+"{n} time{s} this week, you chose God over temptation.",
+"You held the line {n} time{s} this week.",
+"{n} moment{s} of real victory this week.",
+"You said no {n} time{s} this week. That's strength.",
+"This week you fought and won {n} time{s}.",
+"{n} time{s} you took the way out God gave you.",
+"You stood firm {n} time{s} this week.",
+"{n} win{s} over temptation this week.",
+"You walked away {n} time{s} this week."],
+winsSub:["Each one was God's strength in you. Each one makes the next easier.",
+"That's real progress, built one moment at a time.",
+"Every no is a yes to something better.",
+"Freedom grows exactly like this.",
+"Thank God for every one of them.",
+"That's the Spirit at work in you.",
+"You're stronger than you were a week ago.",
+"Those moments matter more than you know.",
+"Keep going. It's working.",
+"God saw every one."],
+wed:["Anything new you've been struggling with?",
+"Is there something new you want to bring to God?",
+"Midweek check-in: anything new to add?",
+"Has anything new come up that you want to work on?",
+"Anything new weighing on you this week?",
+"Is there a struggle you haven't added yet?",
+"Anything you've noticed in yourself lately that you want to track?",
+"Want to add anything new to work on?",
+"Has something new been pulling at you?",
+"Anything new you'd like to bring into your reflections?"]
+};
+
+/* ---- merge extra verses, prayers and tips into the existing content ---- */
+(function(){
+  const add = (arr, more) => { (more||[]).forEach(x=>{ if (x && !arr.includes(x)) arr.push(x); }); };
+  Object.entries(EXTRA_THEMES).forEach(([k,x])=>{ const t = THEMES[k]; if (!t) return; add(t.verses, (x.v||[]).filter(r=>V[r])); add(t.prayers, x.p); add(t.tips, x.t); t.quick = x.q || []; t.actions = x.a || []; });
+  MOODS.forEach(m=>{ const x = EXTRA_MOODS[m.id]; if (!x) return; add(m.verses, (x.v||[]).filter(r=>V[r])); add(m.prayers, x.p); add(m.tips, x.t); });
+})();
+
 </script>
 <script>
 /* Selah · © 2026 Ericson Interactive. All rights reserved. */
@@ -1323,7 +3242,7 @@ function fresh(){
     profile:{ name:"", reasons:[], moods:[], 
       practices:Object.assign({}, PRAC_DEFAULTS) },
     struggles:[], days:{}, restores:{}, declined:{}, achievements:{},
-    favorites:[], prayed:0, roomSessions:0, moodLog:[], rot:{}, pin:null,
+    favorites:[], prayed:0, roomSessions:0, moodLog:[], wins:[], rot:{}, pin:null,
     lastBackupAt:0, flags:{} };
 }
 function hydrate(o){
@@ -1333,7 +3252,7 @@ function hydrate(o){
   Object.keys(PRAC_DEFAULTS).forEach(k=>{ if(typeof m.profile.practices[k]!=="boolean") m.profile.practices[k]=PRAC_DEFAULTS[k]; });
   Object.keys(m.profile.practices).forEach(k=>{ if(!(k in PRAC_DEFAULTS)) delete m.profile.practices[k]; });
   m.flags = Object.assign({}, m.flags||{});
-  ["struggles","favorites","moodLog"].forEach(k=>{ if(!Array.isArray(m[k])) m[k]=[]; });
+  ["struggles","favorites","moodLog","wins"].forEach(k=>{ if(!Array.isArray(m[k])) m[k]=[]; });
   ["days","restores","declined","achievements","rot"].forEach(k=>{ if(!m[k]||typeof m[k]!=="object") m[k]={}; });
   return m;
 }
@@ -1544,16 +3463,22 @@ function famStep(){
   if (S.pin && !ui.unlocked) return ["",0];
   if (!S.onboarded) return ["ob", ui.ob?ui.ob.step:0];
   if (ui.view && ui.view.type==="reflect" && ui.reflect) return ["rf", ui.reflect.step];
+  if (ui.view && ui.view.type==="rescue") return ["rs", ui.view.pos + (ui.view.after||(ui.view.won&&ui.view.seq[ui.view.pos]==="check")?0.5:0)];
+  if (ui.view && ui.view.type==="advice") return ["ad", ui.view.i];
   return ["",0];
 }
 function viewKey(){
   if (S.pin && !ui.unlocked) return "lock";
   if (!S.onboarded) return "ob"+(ui.ob?ui.ob.step:0);
   if (ui.wr) return "wr";
+  if (ui.view && ui.view.type==="rescue") return "rs:"+ui.view.pos+":"+(ui.view.path||"")+":"+(ui.view.after||"")+":"+(ui.view.won?1:0);
+  if (ui.view && ui.view.type==="advice") return "ad:"+ui.view.i;
   if (ui.view) return "v:"+ui.view.type+":"+(ui.view.id||"")+":"+(ui.reflect&&ui.view.type==="reflect"?ui.reflect.step:"");
   return "t:"+ui.tab;
 }
-function pctNow(){ const [f,s]=famStep(); if (f==="ob") return s/(OB_STEPS-1)*100; if (f==="rf") return (s+1)/reflectSteps().length*100; return 0; }
+function pctNow(){ const [f,s]=famStep(); if (f==="ob") return s/(OB_STEPS-1)*100; if (f==="rf") return (s+1)/reflectSteps().length*100;
+  if (f==="rs"){ const v=ui.view; return v.path ? Math.min(100,(v.pos+1+(v.after||v.won?1:0))/v.seq.length*100) : 6; }
+  if (f==="ad"){ const v=ui.view; return (v.i+1)/v.shown*100; } return 0; }
 let vtBusy = false, vtTop = false, skipFade = false;
 function toTop(){ if (vtBusy) vtTop = true; else if (window.scrollY) window.scrollTo(0,0); }
 function render(){
@@ -1595,7 +3520,7 @@ function paint(){
   if (ui.wr){ appEl.innerHTML = vReview(); return; }
   if (ui.view){
     const v = ui.view.type;
-    appEl.innerHTML = v==="reflect" ? vReflect() : v==="room" ? vRoom() : v==="struggle" ? vStruggle() : v==="done" ? vDone() : "";
+    appEl.innerHTML = v==="reflect" ? vReflect() : v==="room" ? vRoom() : v==="struggle" ? vStruggle() : v==="done" ? vDone() : v==="rescue" ? vRescue() : v==="advice" ? vAdvice() : "";
     return;
   }
   const body = ui.tab==="today" ? vToday() : ui.tab==="progress" ? vProgress() : ui.tab==="pray" ? vPray() : ui.tab==="struggles" ? vStruggles() : vYou();
@@ -1738,6 +3663,8 @@ function vToday(){
     h += `<button class="rowlink tap" data-a="reviewOpen"><span class="grow"><span class="eyebrow acc">Weekly Review · ${esc(weekRange(reviewEnd()))}</span><span class="rl-t">Your week is ready</span></span><span class="chev">${I.chev}</span></button>`;
   }
 
+  h += `<button class="rowlink tap" data-a="rescueOpen"><span class="grow"><span class="eyebrow acc">Struggling right now?</span><span class="rl-t">I need help right now</span></span><span class="chev">${I.chev}</span></button>`;
+
   const vr = verseOfDay();
   h += `<section class="stack" style="gap:14px"><div class="eyebrow">Verse for today</div>${verseBlock(vr,{xl:true})}${S.favorites.length?`<button class="linkbtn" data-a="saved" style="align-self:flex-start">Your saved verses (${S.favorites.length})</button>`:""}</section>`;
 
@@ -1836,9 +3763,9 @@ function finishReflect(){
   const s = low && S.struggles.find(x=>x.id===low.id);
   const th = s ? (THEMES[s.theme]||THEMES.general) : THEMES.general;
   const ref = lv>=8 ? MOOD.grateful.verses[pick("doneG",MOOD.grateful.verses.length)] : th.verses[pick("done:"+(s?s.theme:"general"), th.verses.length)];
-  ui.view = {type:"done", ref, wasDone}; ui.reflect = null;
-  render(); toTop();
-  setTimeout(()=>checkAch(), 700);
+  const list = buildAdvice(r.items, r.vals); ui.reflect = null;
+  if (list.length){ ui.view = {type:"advice", i:0, list, shown:Math.min(3, list.length), done:{ref, wasDone}}; render(); toTop(); }
+  else goDone({ref, wasDone});
 }
 function vDone(){
   const st = streakInfo(), v = ui.view;
@@ -1865,6 +3792,7 @@ function vProgress(){
       <div class="stat"><b style="font-size:20px;line-height:1.5">${used?"Used":"1 left"}</b><span>${used?"Restore used "+esc(fmtDate(used,{month:"short",day:"numeric"})):"Restore for "+esc(monthName)}</span></div>
     </div>
     <button class="card lav tap row" data-a="reviewOpen" style="text-align:left;width:100%"><span class="grow"><span class="eyebrow" style="color:var(--accent)">Weekly Review · ${esc(weekRange(reviewEnd()))}</span><span style="display:block;font-family:var(--serif);font-size:20px;margin-top:4px">Look back at your week</span></span><span class="chev">${I.chev}</span></button>`;
+  h += `<button class="btn soft block" data-a="addStrOpen">${I.plus.replace("<svg","<svg width='18' height='18'")} Add a struggle</button>`;
 
   const opts = [["all","Overall"], ...S.struggles.filter(s=>s.status==="active").map(s=>[s.id,s.name]), ...S.struggles.filter(s=>s.status==="overcame").map(s=>[s.id,s.name+" (overcome)"]), ...(enabledPrac().length?[["prac","Daily practices"]]:[])];
   if (!opts.some(o=>o[0]===ui.filter)) ui.filter = "all";
@@ -1925,6 +3853,7 @@ function scoreChart(pts){ const T=10,B=112; return chartFrame(pts, v=>B-(v-1)/9*
 /* ---------------- Pray ---------------- */
 function vPray(){
   let h = `<header><div class="eyebrow">Feelings</div><h1 style="margin-top:6px">What are you feeling?</h1><p class="muted" style="margin-top:8px">Pick what's closest. Each time you'll get a different verse and prayer.</p></header>`;
+  h += `<button class="rowlink tap" data-a="rescueOpen"><span class="grow"><span class="eyebrow acc">Struggling right now?</span><span class="rl-t">I need help right now</span></span><span class="chev">${I.chev}</span></button>`;
   MOOD_GROUPS.forEach(g=>{
     const ms = MOODS.filter(m=>m.g===g.id);
     h += `<section><div class="group-title" style="display:flex;align-items:center;gap:8px"><span class="dot" style="width:8px;height:8px;border-radius:50%;background:${HUE[g.hue]};display:inline-block"></span>${esc(g.name)}</div>
@@ -2019,6 +3948,7 @@ function vStruggle(){
       <div class="row" style="gap:8px"><button class="btn soft sm" data-a="prayed" data-k="s">I prayed this</button><button class="btn ghost sm" data-a="sAnotherP">Another prayer</button></div></section>
     <section class="card stack" style="gap:10px"><div class="eyebrow">One step</div><p>${esc(th.tips[g.t])}</p><button class="linkbtn" data-a="sAnotherT" style="align-self:flex-start">Another idea</button></section>
     ${hist?`<section class="card" style="padding:6px 16px"><div class="eyebrow" style="padding:12px 0 2px">History</div>${hist}</section>`:""}
+    ${s.status==="active"?`<button class="btn soft block" data-a="rescueOpen" data-v="${s.id}">I need help right now</button>`:""}
     <div class="stack" style="gap:10px;margin-top:6px">${s.status==="active"?`<button class="btn primary block" data-a="overcameOpen" data-v="${s.id}">I've overcome this</button>`:`<button class="btn soft block" data-a="reopen" data-v="${s.id}">Reopen this</button>`}
       <button class="btn ghost block" data-a="removeOpen" data-v="${s.id}" style="color:var(--danger)">Remove</button></div>
   </div></div>`;
@@ -2099,6 +4029,11 @@ function buildReview(){
     slides.push(`<div class="eyebrow" style="color:rgba(255,255,255,.7)">When it got heavy</div><div class="wr-big num">${n}</div><div class="wr-h">time${n>1?"s":""} you brought it to God</div><p class="wr-p">Instead of carrying it alone, you went looking for his Word. That matters.</p>`);
   }
 
+  const winsN = (S.wins||[]).filter(w=>inWeek(w.d)).length;
+  if (winsN>0){
+    const wi = dayNum(t)%RESCUE.wins.length, line = RESCUE.wins[wi].replace("{n}", winsN).replace(/\{s\}/g, winsN===1?"":"s");
+    slides.push(`<div class="eyebrow" style="color:rgba(255,255,255,.7)">Wins</div><div class="wr-big num">${winsN}</div><div class="wr-h">${esc(line)}</div><p class="wr-p">${esc(RESCUE.winsSub[wi])}</p>`);
+  }
   const wk = Object.keys(S.days).filter(inWeek).map(k=>S.days[k]);
   const pc = id => wk.filter(d=>d.practices&&d.practices[id]).length;
   const en = enabledPrac();
@@ -2248,7 +4183,7 @@ function sheetHTML(s){
     return sheetHead(esc(fmtDate(k,{weekday:"long"})), esc(fmtDate(k,{month:"long",day:"numeric",year:"numeric"})))+`<div class="stack" style="gap:12px">${body}</div>`;
   }
   if (s.type==="addStr"){
-    return sheetHead("Struggles","Add what you're working on")+`<div class="stack" style="gap:16px">${pickerHTML("add")}<button class="btn primary block" data-a="addStrDone" id="add-done" ${(ui.addSel||[]).length?"":"disabled"}>Add${(ui.addSel||[]).length?" "+ui.addSel.length:""}</button></div>`;
+    return sheetHead(s.wed?"Wednesday check-in":"Struggles", s.wed?esc(s.q):"Add what you're working on")+`<div class="stack" style="gap:16px">${s.wed?`<p class="small muted">If something new has come up, add it here. It'll be part of your reflections starting tomorrow.</p><button class="btn soft block" data-a="closeSheet">Nothing new today</button>`:""}${pickerHTML("add")}<button class="btn primary block" data-a="addStrDone" id="add-done" ${(ui.addSel||[]).length?"":"disabled"}>Add${(ui.addSel||[]).length?" "+ui.addSel.length:""}</button></div>`;
   }
   if (s.type==="overcame"){
     const st = S.struggles.find(x=>x.id===s.id);
@@ -2408,7 +4343,7 @@ const A = {
   removeOpen: el => openSheet({type:"remove", id:el.dataset.v}),
   removeConfirm: el => { S.struggles = S.struggles.filter(x=>x.id!==el.dataset.v); save(); closeSheet(); ui.view=null; render(); },
   addStrOpen: () => { ui.addSel=[]; ui.pq=""; openSheet({type:"addStr"}); },
-  addStrDone: () => { (ui.addSel||[]).forEach(x=>addStruggle(x.name,x.theme,x.custom)); const n=(ui.addSel||[]).length; ui.addSel=null; save(); closeSheet(); render(); if(n) simpleToast(n===1?"Added. It'll be in tonight's reflection.":"Added "+n+". They'll be in tonight's reflection."); },
+  addStrDone: () => { (ui.addSel||[]).forEach(x=>addStruggle(x.name,x.theme,x.custom)); const n=(ui.addSel||[]).length; ui.addSel=null; save(); closeSheet(); render(); if(n){ const when = reflected(todayK()) ? "tomorrow's" : "tonight's"; simpleToast(n===1?"Added. It'll be in "+when+" reflection.":"Added "+n+". They'll be in "+when+" reflection."); } },
   filter: el => { ui.filter = el.dataset.v; render(); },
   calPrev: () => { const [y,m]=ui.cal.split("-").map(Number); const d=new Date(y,m-2,1); ui.cal=d.getFullYear()+"-"+pad(d.getMonth()+1); render(); },
   calNext: () => { const [y,m]=ui.cal.split("-").map(Number); const d=new Date(y,m,1); const k=d.getFullYear()+"-"+pad(d.getMonth()+1); if (k<=todayK().slice(0,7)){ ui.cal=k; render(); } },
@@ -2443,6 +4378,201 @@ const A = {
   resetOpen: () => openSheet({type:"reset"}),
   resetConfirm: async () => { const v=sheetRoot.querySelector("#reset-text").value.trim().toUpperCase(); if (v!=="ERASE") { simpleToast("Type ERASE to confirm"); return; } try{ localStorage.removeItem(KEY); }catch(e){} await idbClear(); S=fresh(); ui.ob=null; ui.view=null; ui.tab="today"; ui.unlocked=false; ui.pin=""; closeSheet(); render(); }
 };
+
+/* ---------------- "I need help right now" ---------------- */
+let rsTimer = null;
+const RS_PATHS = [
+  ["tempted","I'm tempted right now","Get through the next few minutes"],
+  ["gave","I just gave in","Grace, and the next right step"],
+  ["rough","I'm in a rough stretch","Perspective for a hard season"],
+  ["over","I'm overwhelmed","Slow down and breathe"]
+];
+const RS_SEQ = {
+  tempted:["name","act","pray","verse","note","wait","check"],
+  gave:["grace","confess","next","streak","tell","end"],
+  rough:["look","rough","goal","verse","end"],
+  over:["ground","calm","verse","crisis","end"]
+};
+const SERIOUS = new Set(["purity","substances","money","food"]);
+function rsTheme(){ const v = ui.view; const s = v.sid && S.struggles.find(x=>x.id===v.sid); return s ? (THEMES[s.theme]?s.theme:"general") : "general"; }
+function rsName(){ const v = ui.view; const s = v.sid && S.struggles.find(x=>x.id===v.sid); return s ? s.name : ""; }
+/* each piece of content is chosen once per visit, so going back and forth shows the same thing */
+function rc(key, arr){ const c = ui.view.c; if (c[key]==null || c[key]>=arr.length) c[key] = pick("rs:"+key, arr.length); return arr[c[key]]; }
+function goodNote(sid){
+  if (!sid) return null;
+  const ks = Object.keys(S.days).sort().reverse();
+  for (const k of ks){ const d = S.days[k]; const v = d.ratings && d.ratings[sid]; const n = d.notes && d.notes[sid]; if (v!=null && v>=8 && n && String(n).trim()) return {k, n:String(n).trim(), v}; }
+  return null;
+}
+function rsBuild(){
+  const v = ui.view, seq = ["pick"];
+  if (v.path && v.path!=="over" && v.askWhich) seq.push("which");
+  if (v.path) RS_SEQ[v.path].forEach(st=>{ if (st==="note" && !goodNote(v.sid)) return; if (st==="look" && !v.sid) return; seq.push(st); });
+  v.seq = seq;
+}
+function rescueOpen(sid){
+  clearInterval(rsTimer);
+  ui.view = { type:"rescue", pos:0, seq:["pick"], path:null, sid:sid||null, presel:!!sid, askWhich:false, c:{}, ret:ui.view, won:false, after:null };
+  render(); toTop();
+}
+function rsGo(pos){
+  const v = ui.view; clearInterval(rsTimer);
+  v.after = null; v.pos = Math.max(0, Math.min(pos, v.seq.length-1));
+  render(); toTop();
+  if (v.seq[v.pos]==="wait") rsStartTimer();
+}
+function rsStartTimer(){
+  const v = ui.view; if (!v.waitStart) v.waitStart = Date.now();
+  const tick = () => { const el = document.getElementById("rs-timer"); if (!el || !ui.view || ui.view.type!=="rescue"){ clearInterval(rsTimer); return; }
+    const left = Math.max(0, 600 - Math.floor((Date.now()-ui.view.waitStart)/1000));
+    el.textContent = left ? Math.floor(left/60)+":"+String(left%60).padStart(2,"0") : "Ten minutes. You made it.";
+    if (!left) clearInterval(rsTimer); };
+  tick(); rsTimer = setInterval(tick, 1000);
+}
+function rsClose(){ clearInterval(rsTimer); const r = ui.view && ui.view.ret; ui.view = r || null; render(); toTop(); }
+function vRescue(){
+  const v = ui.view, cur = v.after || v.seq[v.pos], th = THEMES[rsTheme()] || THEMES.general, nm = rsName();
+  const head = `<div class="row obhead"><button class="iconbtn quiet" data-a="rsClose" aria-label="Close">${I.close}</button><div class="grow">${progBar()}</div></div>`;
+  const next = (label) => `<div class="row"><button class="btn soft" data-a="rsBack">Back</button><button class="btn primary lg grow" data-a="rsNext">${label||"Next"}</button></div>`;
+  const big = (eyebrow, text, extra) => `<div class="eyebrow acc">${eyebrow}</div><h1 class="q-t">${esc(text)}</h1>${extra||""}`;
+  let body = "", foot = "";
+  if (cur==="pick"){
+    body = `<div class="eyebrow acc">Right now</div><h1 class="q-t">What's happening?</h1><p class="lead">Tap the closest one. This takes about a minute.</p>
+      <div class="opts">${RS_PATHS.map(([id,a,b])=>`<button class="opt" data-a="rsPath" data-v="${id}"><span class="grow"><span style="display:block">${a}</span><span class="small faint" style="font-weight:400">${b}</span></span><span class="chev">${I.chev}</span></button>`).join("")}</div>`;
+  } else if (cur==="which"){
+    const act = active();
+    body = `<div class="eyebrow acc">Which one?</div><h1 class="q-t">What are you fighting right now?</h1>
+      <div class="opts">${act.map(s=>`<button class="opt" data-a="rsWhich" data-v="${s.id}"><span class="grow">${esc(s.name)}</span><span class="chev">${I.chev}</span></button>`).join("")}<button class="opt" data-a="rsWhich" data-v=""><span class="grow">Something else</span><span class="chev">${I.chev}</span></button></div>`;
+  } else if (cur==="name"){
+    body = big("Name it", rc("name", RESCUE.name)); foot = next();
+  } else if (cur==="act"){
+    body = big("Change your situation", rc("act:"+rsTheme(), th.actions||THEMES.general.actions), `<p class="lead">Do it now, then tap Next.</p><button class="linkbtn" data-a="rsAnother" data-k="act:${rsTheme()}" style="align-self:flex-start">Another idea</button>`); foot = next("Done it");
+  } else if (cur==="pray"){
+    body = big("Pray", rc("q:"+rsTheme(), th.quick||THEMES.general.quick), `<p class="lead">Say it out loud or in your head. Mean it.</p>`); foot = next();
+  } else if (cur==="verse"){
+    const pool = v.path==="over" ? MOOD.overwhelmed.verses : th.verses, ref = rc("v:"+(v.path==="over"?"over":rsTheme()), pool);
+    body = `<div class="eyebrow acc">Hold onto this</div>${verseBlock(ref,{xl:true})}`; foot = next();
+  } else if (cur==="note"){
+    const g = goodNote(v.sid);
+    body = `<div class="eyebrow acc">Your own words</div><h1 class="q-t" style="font-weight:600">“${esc(g.n)}”</h1><p class="lead">You wrote this on ${esc(fmtDate(g.k,{month:"long",day:"numeric"}))}, a day you rated ${g.v} for ${esc(nm)}. You've done it before.</p>`; foot = next();
+  } else if (cur==="wait"){
+    body = `<div class="orb" style="width:150px;height:150px;margin:6px auto 4px"></div><div class="eyebrow acc" style="text-align:center">Let it pass</div><h1 class="q-t" style="text-align:center;font-size:26px">${esc(rc("wait", RESCUE.wait))}</h1><p class="num" id="rs-timer" style="text-align:center;font-size:34px;font-weight:700;letter-spacing:-.02em">10:00</p>`;
+    foot = next("I'm okay now");
+  } else if (cur==="check"){
+    if (v.won){ body = big("Well done", rc("through", RESCUE.through)); foot = `<button class="btn primary lg block" data-a="rsClose">Done</button>`; }
+    else body = `<div class="eyebrow acc">Check in</div><h1 class="q-t">How are you now?</h1><div class="opts">
+      <button class="opt" data-a="rsWin"><span class="grow">I got through it</span><span class="chev">${I.chev}</span></button>
+      <button class="opt" data-a="rsStill"><span class="grow">I'm still struggling</span><span class="chev">${I.chev}</span></button></div>`;
+  } else if (cur==="still"){
+    body = big("Keep going", rc("still", RESCUE.still), `<p class="lead">${esc(rc("tell", RESCUE.tell))}</p>`);
+    foot = `<div class="stack" style="gap:10px"><button class="btn primary lg block" data-a="rsAgain">Go through it again</button><div class="row"><button class="btn soft grow" data-a="roomOpen">Prayer Room</button><button class="btn ghost grow" data-a="rsClose">Close</button></div></div>`;
+  } else if (cur==="grace"){
+    const ref = rc("gv", ["1 John 1:9","Lamentations 3:22-23","Psalm 103:12","Romans 8:1","Micah 7:18-19","Isaiah 1:18","Psalm 51:10","Luke 15:20","Hebrews 4:15-16","Proverbs 24:16"]);
+    body = big("First, grace", rc("grace", RESCUE.grace), `<div class="card" style="margin-top:4px">${verseBlock(ref)}</div>`); foot = next();
+  } else if (cur==="confess"){
+    body = `<div class="eyebrow acc">Pray</div><p class="prayer" style="font-size:21px;line-height:1.5">${esc(rc("confess", RESCUE.confess))}</p>`; foot = next();
+  } else if (cur==="next"){
+    body = big("One next step", rc("tip:"+rsTheme(), th.tips), `<button class="linkbtn" data-a="rsAnother" data-k="tip:${rsTheme()}" style="align-self:flex-start">Another idea</button>`); foot = next();
+  } else if (cur==="streak"){
+    body = big("Your streak", reflected(todayK()) ? "You already reflected today, and your streak is safe. Be honest if you update it." : rc("streak", RESCUE.streak)); foot = next();
+  } else if (cur==="tell"){
+    body = big("You're not alone", rc("tell", RESCUE.tell), SERIOUS.has(rsTheme()) ? `<p class="lead">If this feels like it's controlling your life, a pastor, counselor, or doctor is a wise next step. That's strength, not weakness.</p>` : ""); foot = next();
+  } else if (cur==="look"){
+    const t = todayK(); let cells = "", best = null;
+    for (let i=13;i>=0;i--){ const k = addDays(t,-i), r = ratingOn(k, v.sid); cells += `<i style="${r!=null?`background:${scoreColor(r)}`:""}"></i>`; }
+    for (let i=0;i<30;i++){ const k = addDays(t,-i), r = ratingOn(k, v.sid); if (r!=null && (!best || r>best.v)) best = {k, v:r}; }
+    const g = goodNote(v.sid);
+    body = `<div class="eyebrow acc">Look back · ${esc(nm)}</div><h1 class="q-t">The last two weeks</h1><div class="minis rs-minis">${cells}</div>
+      ${best?`<p class="lead">Your best day this month was a ${best.v}, on ${esc(fmtDate(best.k,{month:"long",day:"numeric"}))}. That's still you.</p>`:`<p class="lead">Every day you rate builds a picture of where God is moving.</p>`}
+      ${g?`<div class="card"><div class="eyebrow">You wrote on a good day</div><p style="margin-top:6px">“${esc(g.n)}”</p></div>`:""}`; foot = next();
+  } else if (cur==="rough"){
+    body = big("Keep perspective", rc("rough", RESCUE.rough)); foot = next();
+  } else if (cur==="goal"){
+    body = big("One small goal", rc("goal", RESCUE.goal)); foot = next();
+  } else if (cur==="ground"){
+    body = `<div class="orb" style="width:150px;height:150px;margin:6px auto 4px"></div><div class="eyebrow acc" style="text-align:center">Slow down</div><h1 class="q-t" style="text-align:center;font-size:26px">${esc(rc("ground", RESCUE.ground))}</h1>`; foot = next();
+  } else if (cur==="calm"){
+    body = `<div class="eyebrow acc">Pray</div><p class="prayer" style="font-size:21px;line-height:1.5">${esc(rc("calm", RESCUE.calm))}</p>`; foot = next();
+  } else if (cur==="crisis"){
+    body = `<div class="eyebrow acc">You don't carry this alone</div><h1 class="q-t">Tell someone tonight.</h1><p class="lead">A parent, a pastor, a coach, or a friend. Selah can help you pause, but it can't replace people who love you.</p>${crisisCard()}`; foot = next();
+  } else if (cur==="end"){
+    const msg = v.path==="gave" ? "Get some rest. Tomorrow is new, and so is his mercy." : v.path==="rough" ? "Keep going. You're not alone in this season." : "Be gentle with yourself tonight. God is with you.";
+    body = big("Before you go", msg);
+    foot = `<div class="stack" style="gap:10px">${reflected(todayK())?"":`<button class="btn primary lg block" data-a="reflectStart">Reflect now</button>`}<button class="btn ${reflected(todayK())?"primary lg":"soft"} block" data-a="rsClose">Done</button></div>`;
+  }
+  return `<div class="wrap full ob">${head}<div class="body">${body}</div>${foot?`<div class="foot">${foot}</div>`:""}</div>`;
+}
+
+/* ---------------- advice after reflecting ---------------- */
+const bandOf = v => v<=4 ? "r" : v<=7 ? "m" : "s";
+function buildAdvice(items, vals){
+  const list = items.map(it=>{ const s = S.struggles.find(x=>x.id===it.id); return {it, s, v:vals[it.id]}; })
+    .filter(o=>o.v!=null && (o.it.id==="_walk" || (o.s && !o.s.custom)))
+    .sort((a,b)=>a.v-b.v)
+    .map(o=>{ const theme = o.s && THEMES[o.s.theme] ? o.s.theme : "general", th = THEMES[theme], band = bandOf(o.v), pool = ADVICE[theme][band];
+      return { id:o.it.id, name:o.it.name, v:o.v, theme, advice:pool[pick("adv:"+theme+":"+band, pool.length)], ref:th.verses[pick("advV:"+theme, th.verses.length)], quick:(th.quick||[])[pick("advQ:"+theme, (th.quick||[]).length)] }; });
+  return list;
+}
+function vAdvice(){
+  const v = ui.view, a = v.list[v.i], shown = v.shown, last = v.i>=shown-1;
+  const head = `<div class="row obhead"><button class="iconbtn quiet" data-a="advSkip" aria-label="Skip">${I.close}</button><div class="grow">${progBar()}</div></div>`;
+  const body = `<div class="eyebrow acc">After your reflection · ${v.i+1} of ${shown}</div>
+    <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap"><h1 class="q-t" style="font-size:30px">${esc(a.name)}</h1><span class="pill num" style="background:${scoreTint(a.v,.16)};color:${scoreColor(a.v)}">${a.v} · ${LABELS[a.v]}</span></div>
+    <p class="body-lg" style="font-size:20px;line-height:1.45">${esc(a.advice)}</p>
+    <div class="card">${verseBlock(a.ref)}</div>
+    ${a.quick?`<p class="prayer muted" style="font-style:italic">Pray: ${esc(a.quick)}</p>`:""}
+    ${a.v<=3?`<button class="btn soft block" data-a="rescueOpen" data-v="${a.id==="_walk"?"":a.id}">I need help right now</button>`:""}`;
+  const more = last && v.list.length>shown ? `<button class="linkbtn" data-a="advMore" style="align-self:center">See the rest (${v.list.length-shown})</button>` : "";
+  const foot = `<div class="stack" style="gap:12px">${more}<div class="row">${v.i>0?`<button class="btn soft" data-a="advBack">Back</button>`:""}<button class="btn primary lg grow" data-a="advNext">${last?"Finish":"Next"}</button></div></div>`;
+  return `<div class="wrap full ob">${head}<div class="body">${body}</div><div class="foot">${foot}</div></div>`;
+}
+function goDone(done){
+  ui.view = Object.assign({type:"done"}, done); render(); toTop();
+  setTimeout(()=>checkAch(), 700);
+  const t = todayK();
+  if (new Date().getDay()===3 && S.flags.wedAsk!==t){
+    S.flags.wedAsk = t; save();
+    setTimeout(()=>{ if (ui.view && ui.view.type==="done" && !ui.sheet && !ui.wr){ ui.addSel=[]; ui.pq=""; openSheet({type:"addStr", wed:true, q:RESCUE.wed[pick("wed", RESCUE.wed.length)]}); } }, 1300);
+  }
+}
+
+Object.assign(A, {
+  rescueOpen: el => rescueOpen(el && el.dataset ? (el.dataset.v||null) : null),
+  rsClose: () => rsClose(),
+  rsPath: el => { const v = ui.view; v.path = el.dataset.v; v.won = false; v.waitStart = 0;
+    const act = active();
+    if (v.path==="over"){ /* no struggle needed */ }
+    else if (!v.presel){ if (act.length===1) v.sid = act[0].id; else if (act.length>1){ v.askWhich = true; v.sid = null; } }
+    rsBuild(); rsGo(1); },
+  rsWhich: el => { const v = ui.view; v.sid = el.dataset.v || null; v.askWhich = true; rsBuild(); const i = v.seq.indexOf("which"); rsGo(i+1); },
+  rsNext: () => { const v = ui.view; if (v.pos < v.seq.length-1) rsGo(v.pos+1); else rsClose(); },
+  rsBack: () => { const v = ui.view; if (v.after){ v.after = null; render(); return; } if (v.pos>0) rsGo(v.pos-1); },
+  rsAnother: el => { const k = el.dataset.k; delete ui.view.c[k]; render(); },
+  rsWin: () => { const v = ui.view; if (!v.won){ v.won = true; S.wins = S.wins||[]; S.wins.push({d:todayK(), sid:v.sid||"", at:Date.now()}); save(); checkAch(); } render(); },
+  rsStill: () => { const v = ui.view; v.after = "still"; render(); toTop(); },
+  rsAgain: () => { const v = ui.view; v.after = null; v.waitStart = 0; ["act:"+rsTheme(),"q:"+rsTheme(),"wait","still"].forEach(k=>delete v.c[k]); rsGo(Math.max(1, v.seq.indexOf("act"))); },
+  advNext: () => { const v = ui.view; if (v.i < v.shown-1){ v.i++; render(); toTop(); } else goDone(v.done); },
+  advBack: () => { const v = ui.view; if (v.i>0){ v.i--; render(); toTop(); } },
+  advMore: () => { const v = ui.view; v.shown = v.list.length; v.i++; render(); toTop(); },
+  advSkip: () => goDone(ui.view.done)
+});
+
+/* ---------------- refresh the app every hour ---------------- */
+const LOADED_AT = Date.now();
+function canReload(){
+  const ae = document.activeElement;
+  return S.onboarded && !ui.view && !ui.wr && !ui.sheet && !(ae && /^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName));
+}
+function hourlyReload(){
+  if (Date.now()-LOADED_AT < 3600e3 || !canReload()) return;
+  try{ flush(); }catch(e){}
+  try{ sessionStorage.setItem("selah_reload", JSON.stringify({at:Date.now(), tab:ui.tab, unlocked:!!ui.unlocked})); }catch(e){}
+  location.reload();
+}
+setInterval(hourlyReload, 60e3);
+document.addEventListener("visibilitychange", ()=>{ if (!document.hidden) setTimeout(hourlyReload, 400); });
+(function(){ try{ const r = JSON.parse(sessionStorage.getItem("selah_reload")||"null"); sessionStorage.removeItem("selah_reload");
+  if (r && Math.abs(Date.now()-r.at) < 300e3){ if (r.tab) ui.tab = r.tab; if (r.unlocked) ui.unlocked = true; } }catch(e){} })();
 
 /* ---------------- events ---------------- */
 document.addEventListener("click", e=>{
@@ -2484,7 +4614,7 @@ document.addEventListener("keydown", e=>{
 let lastDay = todayK(), dayTimer = null;
 function newDay(){
   const t = todayK(); if (t===lastDay) return; lastDay = t;
-  if (ui.view && (ui.view.type==="reflect" || ui.view.type==="room")) { scheduleMidnight(); return; }
+  if (ui.view && ["reflect","room","rescue","advice"].includes(ui.view.type)) { scheduleMidnight(); return; }
   if (ui.sheet) closeSheet();
   ui.view = null; ui.wr = null; ui.cal = null; ui.tab = "today"; clearTimeout(wrTimer);
   lastKey = null; render(); toTop();
