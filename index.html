@@ -409,9 +409,11 @@ main header h1{font-size:34px;letter-spacing:-.035em}
 .install-t .ico svg{width:20px;height:20px}
 .install h3{font-size:16px;margin-bottom:4px}
 .install{padding:16px}
+.install-warn{margin-top:10px;padding:10px 12px;border-radius:12px;background:rgba(255,190,120,.09);border:1px solid rgba(255,190,120,.22);color:var(--muted);line-height:1.45}.install-warn b{color:#ffcf9e}
 .install-how{margin-top:10px;display:inline-flex;align-items:center;gap:4px;padding:0;border:0;background:none;color:var(--accent);font:inherit;font-size:15px;font-weight:600;cursor:pointer}
 .install-how span{display:inline-flex}.install-how svg{width:16px;height:16px}
-@media (max-height:700px){.ob .body.welcome{gap:12px}.ob .body.welcome .hero-logo.glow{width:58px;height:58px;border-radius:16px}.ob .body.welcome .wordmark{font-size:46px}.ob .body.welcome .lead{font-size:16px}.install{margin-top:6px}}
+@media (max-height:700px){.ob .body.welcome{gap:12px}.ob .body.welcome .hero-logo.glow{width:58px;height:58px;border-radius:16px}.ob .body.welcome .wordmark{font-size:46px}.ob .body.welcome .lead{font-size:16px}.install{margin-top:6px}.install-warn{margin-top:8px;padding:8px 10px;font-size:13px}}
+@media (max-height:620px){.ob .body.welcome{gap:8px}.ob .body.welcome .hero-logo.glow{width:48px;height:48px;border-radius:14px}.ob .body.welcome .wordmark{font-size:40px}.ob .body.welcome .lead{font-size:15px;line-height:1.4}.ob .body.welcome>p.faint{display:none}.install{padding:14px;gap:8px}.install-t{gap:12px}.install-t .ico{width:34px;height:34px}.install h3{font-size:15px}.install-how{margin-top:6px}}
 .howto{padding:16px;border-radius:18px;background:var(--surface);border:1px solid var(--line)}
 .howto.mine{border-color:rgba(185,166,255,.35);background:radial-gradient(120% 140% at 0% 0%,rgba(185,166,255,.12),transparent 65%),var(--surface)}
 .howto-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
@@ -3641,7 +3643,7 @@ function browserKind(){
   return /Android/.test(ua) ? "android" : "desktop";
 }
 function installBlock(){
-  return `<div class="install"><div class="install-t"><span class="ico">${I.phone}</span><div><h3>Add Selah to your Home Screen first</h3><p class="muted small">It opens like an app and keeps your progress there. Do it before you start.</p><button class="install-how" data-a="installHow">How do I do that?<span>${I.chev}</span></button></div></div></div>`;
+  return `<div class="install"><div class="install-t"><span class="ico">${I.phone}</span><div><h3>Add Selah to your Home Screen first</h3><p class="muted small">It opens like an app and keeps your progress there. Do it before you start.</p><p class="install-warn small"><b>Don't skip this.</b> If you start here and add it later, the app will open empty and your progress won't come with it.</p><button class="install-how" data-a="installHow">How do I do that?<span>${I.chev}</span></button></div></div></div>`;
 }
 function vOnboarding(){
   if (!ui.ob) obInit();
